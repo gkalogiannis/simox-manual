@@ -64,6 +64,9 @@
 \usepackage{epstopdf} % for eps figures, must be after the graphicx usepackage
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{hyperref}
+\usepackage{enumitem}
 \lstset { %
 frame=single,
     breaklines=true,
@@ -89,7 +92,9 @@ frame=single,
 \titleGM % This command includes the title page
 \tableofcontents
 \newpage
-\section{Introduction}
+
+\chapter{Introduction}
+\begin{comment}
 \subsection{Definitions}
 \subsubsection*{End Effector - eef}
 In robotics, an end effector is the device at the end of a robotic arm, designed to interact with the environment. The exact nature of this device depends on the application of the robot.\par In the strict definition, which originates from serial robotic manipulators, the end effector means the last link (or end) of the robot. At this endpoint the tools are attached. In a wider sense, an end effector can be seen as the part of a robot that interacts with the work environment. This does not refer to the wheels of a mobile robot or the feet of a humanoid robot which are also not end effectors—they are part of the robot's mobility.
@@ -104,10 +109,11 @@ dynamic behavior. Such a control scheme, requires methods of
 computing the finger parameters(positions and forces of fingertips
 and joints). These algorithms are referred to as robotic grasp
 synthesis algorithms.
-\subsection{Robotic grasping}
+\end{comment}
+\section{Robotic grasping}
 Over the past decades, research in robotic grasping has flourished. Several algorithms have been developed for synthesizing robotic grasps in order to achieve stability,force-closure,task compatibility and other properties. Different approaches have been developed to meet these goals, and substantial improvements have been claimed. Thus,the availability of a large number of algorithms
 for our purpose has made it difficult to choose, since their approaches and assumptions are different.
-\subsubsection{Background and terminology}
+\section{Background and terminology}
 The basic function of a gripper is to grasp objects and possibly
 manipulate them by means of its fingers. One of the essential
 properties looked for in the grasp configuration selection is the
@@ -140,7 +146,7 @@ equilibrium, in which all forces and moments can be derived from a potential fun
 A grasp verify the force closure property if and only if, for any external wrench
 \textbf{$\widehat{\textbf{w}}$}, there exists a magnitude vector $\lambda$ satisfying the constraint equalities, therefore \textbf{W} $\lambda$=\textbf{$\widehat{\textbf{w}}$}
 
-\subsubsection{Analytic Approaches}
+\section{Analytic Approaches}
 \par
 Analytic approaches refers to methods that construct force-closure grasps with a  multi-fingered robotic hand that are dexterous, in equilibrium, stable and exhibit a certain dynamic behavior. Grasp synthesis is then usually formulated as a constrained  optimization problem over criteria that measure one or several of these four properties. In this case, a grasp is typically defined by the grasp map that transforms the forces exerted at a set of contact points to object wrenches.The criteria are based on  geometric, kinematic or dynamic formulations. 
 \par
@@ -148,7 +154,7 @@ Analytic approaches usually based on assumptions such as simplified contact mode
 to their approximate nature.
 
 \par
-\subsubsection{Empirical - Data Driven Approaches}
+\section{Empirical - Data Driven Approaches}
 \par
 Empirical or data-driven approaches rely on sampling grasp candidates for an object and  ranking them according to specific metric. This process is usually based on some existing
 grasp experience that can be a heuristic or is generated in simulation or on a real  robot. In this case grasp is commonly parameterized by
@@ -160,7 +166,97 @@ grasp experience that can be a heuristic or is generated in simulation or on a r
 \end{description}
 Data-driven approaches differ in how the set of grasp candidates is sampled, how the grasp quality is estimated and how good  grasps are represented for future use. Some  methods measure grasp quality based on analytic formulations,  but more commonly they  encode e.g. human demonstrations, perceptual information or semantics.
 \par
-\subsection{Grasp planning Tools - SOA}
+\chapter{Installation}
+\section{Get Simox from a PPA}
+You have the choice of either installing the simox package from our PPA or by compiling the sources (see below). The PPA/package currently is available only on Ubuntu distributions starting from Precise (12.04) up to and including Trusty (14.04).
+\par
+First, add the PPA to your list of repositories and then install the package via apt-get: 
+\begin{lstlisting}
+sudo add-apt-repository ppa:simox-dev/ppa
+sudo apt-get update
+sudo apt-get install simox
+\end{lstlisting}
+Keep in mind that this will only install simox without any special options enabled (e.g. bullet) and with Coin visualization support. 
+\subsubsection{Get Simox from gitlab repository}
+Retrieve the sources with: 
+\begin{lstlisting}
+git clone https://gitlab.com/Simox/simox.git
+\end{lstlisting}
+Or use a GUI-based GIT client to grab the sources from: 
+\hyperref[simox gitlab]{'https://gitlab.com/Simox/simox.git'}
+\section{Install dependencies}
+You will need the following libraries installed on your system: 
+
+\begin{description}
+\item[$\bullet$ ] CMake $>$=2.8.3: A cross-platform, open-source build system.\hyperref[cmake]{http://www.cmake.org/} 
+\item[$\bullet$ ] Boost $>$=1.42: Provides free peer-reviewed portable C++ source libraries.\hyperref[boost]{http://www.boost.org} 
+\item[$\bullet$ ] Eigen $>$=3.0: A header-only C++ template library for linear algebra: matrices, vectors, and numerical solvers.\hyperref[Eigen]{http://eigen.tuxfamily.org} 
+\end{description}
+\subsection{Visualization / 3D Model support}
+\newcounter{MyCounter}
+\setcounter{MyCounter}{1}% initial value
+\begin{enumerate}[label={\arabic{MyCounter}\addtocounter{MyCounter}{1}}]
+\item Coin3D/Qt (recommended) For 3D visualization support Simox offers a plugin-like mechanism that can be extended in order to make your favorite 3D library usable. In the current version Coin3D/Qt support is already implemented allowing to handle Open Inventor file formats (.iv, .vrml) in combination with Qt-based GUIs. If you want to use this visualization supported you will additionally need the following libraries:
+\begin{description}
+\item[$\bullet$ ] Qt4 ($>$=4.6) or Qt5: Cross-platform application and UI framework.\newline 
+\hyperref[qt]{http://qt-project.org/downloads} 
+\item[$\bullet$ ] Coin3D ($>$=3.1.3): A high-level, retained-mode toolkit for effective 3D graphics development.\newline  \hyperref[coin3d]{https://bitbucket.org/Coin3D/coin} 
+\item[$\bullet$ ] SoQt ($>$=1.5): A set of Qt GUI bindings for Coin3D library. \newline 
+\hyperref[SoQt]{https://bitbucket.org/Coin3D/soqt} 
+\end{description} 
+\item OpenSceneGraph With OpenSceneGraph (OSG) a LGPL library can be used with Simox (instaed of the GPL-library Coin3D). OSG supports several file formats for 3D-model loading, e.g. 3dc, 3ds, flt, geo, iv, ive, lwo, md2, obj, osg, whereas some of them depend on external libraries which must be present on your system. Have a look at OSG's installation and plugin help pages. 
+\begin{description}
+\item[$\bullet$ ] Qt4 ($>$=4.6): Cross-platform application and UI framework. QT versions>=5 are not yet supported.\newline 
+\hyperref[qt]{http://qt-project.org/downloads} 
+\item[$\bullet$ ] OpenSceneGraph ($>$=3.0): A high performance 3D graphics toolkit.\newline  \hyperref[openscene]{http://www.openscenegraph.org} 
+\end{description} 
+\item No visualization support With this setup, visualization is disabled and hence, no collision detection can be performed. Nevertheless all operations which do not rely on 3d models, e.g. coordinate transformations, are still available. 
+\end{enumerate}
+\subsection{Linux}
+Simox is tested on several Ubuntu platforms and there shouldn't be any problems with other distributions 
+\begin{itemize}
+
+\item[$\bullet$] In order to setup the dependencies, you could either 
+\begin{itemize}
+\item[$\bullet$] have a look at the package manager of your distribution (maybe the libs you will need are already installed) 
+\item[$\bullet$] or you install them by hand, i.e. compile and install the sources.  
+\item[$\bullet$] On an Ubuntu 14.04 system you can install the libraries (with coin support) the following way (on other systems the names of the libraries may differ slightly):
+\end{itemize}
+\item[$\bullet$] create a build directory, e.g \begin{lstlisting}
+<path_to_your_simox_checkout>/build
+\end{lstlisting}
+\item[$\bullet$] Setup your environment variables (not needed if the dependencies were installed to the standard linux system paths, e.g. when the package management system was used) 
+\begin{itemize}
+\item[$\bullet$] \texttt{Eigen3\_DIR->Path to Eigen3}
+\item[$\bullet$] \texttt{BOOST\_ROOT -> The Boost directory }
+\item[$\bullet$] \texttt{Coin3D\_DIR -> The Coin3D library  }
+\item[$\bullet$] \texttt{SoQt\_DIR -> the SoQt lib (Has to be compiled with the used Coin3D and Qt version)  }
+\item[$\bullet$] \texttt{QT\_QMAKE\_EXECUTABLE -> The complete path to the qmake binary file. Usually located at } \begin{lstlisting}[language=bash]
+<QtDir>/bin/qmake
+\end{lstlisting}
+\item[$\bullet$] \texttt{Simox\_DIR -> The path to your simox checkout }
+\item[$\bullet$] \texttt{ An exemplary setup could look like this (\textbf{}). You can create a simox\_setpath.sh file and by calling source simox\_setpath.sh all exports are set in your shell environment. }
+
+\item[$\bullet$] Create make files: 
+\begin{itemize}
+\item[$\bullet$] go to your build directory: cd a
+\item[$\bullet$] call either ccmake .. or use the cmake-gui .. (see below for further information about cmake-gui) 
+\item[$\bullet$] configure ('c' in ccmake) and generate make files ('g' in ccmake) 
+\end{itemize}
+\item[$\bullet$] Compile Simox 
+\begin{itemize}
+\item[$\bullet$] Now Simox with all examples can be compiled by typing 'make'. Optionally you can specify how many processes should be used for compiling (e.g. 'make -j4') 
+\end{itemize}
+\item[$\bullet$] IDE 
+\begin{itemize}
+\item[$\bullet$] You can use the make files within your favorite IDE, like Eclipse http://www.eclipse.org or QtCreator http://qt-project.org/doc/qt-5/topics-app-development.html (which can be used also for non-Qt projects) 
+\end{itemize}
+\end{itemize}
+\end{itemize}
+\begin{lstlisting}
+sudo apt-get install build-essential libboost-all-dev libeigen3-dev libsoqt4-dev libcoin80-dev cmake cmake-gui libqt4-dev subversion
+\end{lstlisting}
+\section{Grasp planning Tools - SOA}
 \subsubsection{Need of grasping planning tools}
 \par
 Automatic grasp planning is a difficult problem because of the huge number of possible hand configurations. Humans simplify the problem by choosing an appropriate prehensile posture appropriate for the object and task to be performed. By modeling an object as a set of shape primitives (spheres, cylinders, cones and boxes) grasping tools can use a set of rules to generate a set of grasp starting positions and pregrasp shapes. These generated data can then be tested on the object model. Several grasp planning tools offer also the functionality to evaluate and test the resulted grasp in order to present the best grasp to the user.
