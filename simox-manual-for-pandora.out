@@ -1,0 +1,17 @@
+\BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.1.1}{Robotic grasping}{chapter.1}% 2
+\BOOKMARK [1][-]{section.1.2}{Background and terminology}{chapter.1}% 3
+\BOOKMARK [1][-]{section.1.3}{Analytic Approaches}{chapter.1}% 4
+\BOOKMARK [1][-]{section.1.4}{Empirical - Data Driven Approaches}{chapter.1}% 5
+\BOOKMARK [0][-]{chapter.2}{Installation}{}% 6
+\BOOKMARK [1][-]{section.2.1}{Get Simox from a PPA}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.2}{Install dependencies}{chapter.2}% 8
+\BOOKMARK [2][-]{subsection.2.2.1}{Visualization / 3D Model support}{section.2.2}% 9
+\BOOKMARK [2][-]{subsection.2.2.2}{Linux}{section.2.2}% 10
+\BOOKMARK [1][-]{section.2.3}{Grasp planning Tools - SOA}{chapter.2}% 11
+\BOOKMARK [1][-]{section.2.4}{The Simox Grasp Planner Case}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.4.1}{Indroduction - What is Simox}{section.2.4}% 13
+\BOOKMARK [2][-]{subsection.2.4.2}{Components of Simox}{section.2.4}% 14
+\BOOKMARK [2][-]{subsection.2.4.3}{Inside the VirtualRobot library}{section.2.4}% 15
+\BOOKMARK [2][-]{subsection.2.4.4}{Inside the Grasp Studio}{section.2.4}% 16
+\BOOKMARK [2][-]{subsection.2.4.5}{Summarizing Simox Archtecture}{section.2.4}% 17
