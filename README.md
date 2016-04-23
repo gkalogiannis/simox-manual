@@ -1,1 +1,1 @@
-# A simox robotics grasp planner manual!
+# A simox robotics grasp planner manual
