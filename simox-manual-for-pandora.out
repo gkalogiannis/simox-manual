@@ -16,14 +16,37 @@
 \BOOKMARK [2][-]{subsection.2.5.3}{Windows Environment Variables}{section.2.5}% 16
 \BOOKMARK [1][-]{section.2.6}{Compile Simox}{chapter.2}% 17
 \BOOKMARK [1][-]{section.2.7}{Setup your own project}{chapter.2}% 18
-\BOOKMARK [0][-]{chapter.3}{Inside Simox}{}% 19
-\BOOKMARK [1][-]{section.3.1}{Inside the VirtualRobot library}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.1.1}{Build a robot/environment model}{section.3.1}% 21
-\BOOKMARK [2][-]{subsection.3.1.2}{Virtual Robot: The robot library}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.3}{File formats}{section.3.1}% 23
-\BOOKMARK [1][-]{section.3.2}{Inside the Saba Library}{chapter.3}% 24
-\BOOKMARK [1][-]{section.3.3}{Inside the Grasp Studio}{chapter.3}% 25
-\BOOKMARK [2][-]{subsection.3.3.1}{The Generic Grasp Planner}{section.3.3}% 26
-\BOOKMARK [2][-]{subsection.3.3.2}{Setup the Grasp Planner}{section.3.3}% 27
-\BOOKMARK [2][-]{subsection.3.3.3}{Plan a Grasp}{section.3.3}% 28
-\BOOKMARK [2][-]{subsection.3.3.4}{Store a Set of Grasps}{section.3.3}% 29
+\BOOKMARK [0][-]{chapter.3}{Inside the VirtualRobot library}{}% 19
+\BOOKMARK [1][-]{section.3.1}{Build a robot/environment model}{chapter.3}% 20
+\BOOKMARK [2][-]{subsection.3.1.1}{Minimal Example}{section.3.1}% 21
+\BOOKMARK [2][-]{subsection.3.1.2}{Visualizations}{section.3.1}% 22
+\BOOKMARK [2][-]{subsection.3.1.3}{Joints}{section.3.1}% 23
+\BOOKMARK [2][-]{subsection.3.1.4}{Kinematic Chains}{section.3.1}% 24
+\BOOKMARK [2][-]{subsection.3.1.5}{Denavit-Hartenberg Parameters}{section.3.1}% 25
+\BOOKMARK [2][-]{subsection.3.1.6}{Coordinate Systems}{section.3.1}% 26
+\BOOKMARK [2][-]{subsection.3.1.7}{Collision Models}{section.3.1}% 27
+\BOOKMARK [2][-]{subsection.3.1.8}{Multiple Files}{section.3.1}% 28
+\BOOKMARK [2][-]{subsection.3.1.9}{Robot Node Sets}{section.3.1}% 29
+\BOOKMARK [2][-]{subsection.3.1.10}{End Effector Definitions}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.11}{Objects and Scenes}{section.3.1}% 31
+\BOOKMARK [1][-]{section.3.2}{Virtual Robot: The robot library}{chapter.3}% 32
+\BOOKMARK [2][-]{subsection.3.2.1}{Preliminaries}{section.3.2}% 33
+\BOOKMARK [2][-]{subsection.3.2.2}{Accessing a Robot}{section.3.2}% 34
+\BOOKMARK [2][-]{subsection.3.2.3}{Obstacles and Grasps}{section.3.2}% 35
+\BOOKMARK [2][-]{subsection.3.2.4}{Visualization}{section.3.2}% 36
+\BOOKMARK [2][-]{subsection.3.2.5}{Collision Detection}{section.3.2}% 37
+\BOOKMARK [2][-]{subsection.3.2.6}{Workspace Analysis: Reachability and Manipulability}{section.3.2}% 38
+\BOOKMARK [2][-]{subsection.3.2.7}{Jacobians and IK solving}{section.3.2}% 39
+\BOOKMARK [2][-]{subsection.3.2.8}{Hierarchical IK solving}{section.3.2}% 40
+\BOOKMARK [2][-]{subsection.3.2.9}{Stability computations}{section.3.2}% 41
+\BOOKMARK [1][-]{section.3.3}{File formats}{chapter.3}% 42
+\BOOKMARK [2][-]{subsection.3.3.1}{XSD Schema defintion}{section.3.3}% 43
+\BOOKMARK [2][-]{subsection.3.3.2}{Robot Definitions}{section.3.3}% 44
+\BOOKMARK [2][-]{subsection.3.3.3}{Obstacles and Manipulation Objects}{section.3.3}% 45
+\BOOKMARK [2][-]{subsection.3.3.4}{Scenes}{section.3.3}% 46
+\BOOKMARK [0][-]{chapter.4}{Inside the Saba Library}{}% 47
+\BOOKMARK [0][-]{chapter.5}{Inside the Grasp Studio}{}% 48
+\BOOKMARK [1][-]{section.5.1}{The Generic Grasp Planner}{chapter.5}% 49
+\BOOKMARK [1][-]{section.5.2}{Setup the Grasp Planner}{chapter.5}% 50
+\BOOKMARK [1][-]{section.5.3}{Plan a Grasp}{chapter.5}% 51
+\BOOKMARK [1][-]{section.5.4}{Store a Set of Grasps}{chapter.5}% 52

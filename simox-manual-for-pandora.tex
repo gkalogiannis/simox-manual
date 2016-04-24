@@ -69,7 +69,7 @@
 \usepackage{enumitem}
 \usepackage{subfloat}
 \usepackage{float}
-
+\pagenumbering{roman}
 \lstset { %
 frame=single,
     breaklines=true,
@@ -91,12 +91,12 @@ frame=single,
 \newpage
 \begin{document}
 
-\pagestyle{empty} % Removes page numbers
 \titleGM % This command includes the title page
 \tableofcontents
 \newpage
-
+\pagenumbering{arabic}
 \chapter{Introduction}
+
 \section{Robotic grasping}
 Over the past decades, research in robotic grasping has flourished. Several algorithms have been developed for synthesizing robotic grasps in order to achieve stability,force-closure,task compatibility and other properties. Different approaches have been developed to meet these goals, and substantial improvements have been claimed. Thus,the availability of a large number of algorithms
 for our purpose has made it difficult to choose, since their approaches and assumptions are different.
@@ -262,8 +262,7 @@ Here is an exemplary setup with cmake-gui:\par
 \end{lstlisting}
 \end{itemize}
 
-\chapter{Inside Simox}
-\section{Inside the VirtualRobot library}
+\chapter{Inside the VirtualRobot library}
 With the Virtual Robot library robots and environments can be specified and accessed via XML definitions. The structure of a robot is given by its joints (called RobotNodes) which are defined via Denavit-Hartenberg conventions or an easy-to-use "Translation+Rotation" scheme. The robot specification holds further information as name, joint limits, sensors, visualization and collision models. For convenient access kinematic chains and collections of collision models can be additionally defined. An instance of such a robot definition can be visualized by a viewer to show the current state of a robot. Furthermore, environments, obstacles and objects to manipulate can be defined and visualized. Thus it is possible to construct complex scenes used for simulation or planning and to store and load such scene definitions to/from XML files. The main features of the library are:
 \begin{description}
   \item[$\bullet$ ]The library defines an interface for collision checking, allowing to exchange the collision checker used for determining distances or collisions. Currently the PQP collision checker is used due to its fast and robust implementation.
@@ -275,10 +274,10 @@ With the Virtual Robot library robots and environments can be specified and acce
    \item[$\bullet$ ]Multithreading is supported, e.g. multiple instances of the collsiion checker can be used to parallelize collision queries. 
 \end{description}
 
-\subsection{Build a robot/environment model}
+\section{Build a robot/environment model}
 Robot models are defined via XML files, where the kinematic structure as well as additional information (e.g. visualizations, joint definitions or physics information) is stored. A robot consists of so-called Robot Nodes, which hold joint definitions and visualization data. After loading, these data structures can be accessed through the VirtualRobot library.\par In the following examples we start with a simple robot system in order to show how the XML definitions are structured. Later more complex examples are given, where you can see how advanced robot definitions can be created. \par
 
-\subsubsection{Minimal Example}
+\subsection{Minimal Example}
 \par
 This minimal example shows how to define a robot. The file can be found in the doc/tutorial folder of the simox source tree. It can be loaded with VirtualRobot's RobotViewer example (located at VirtualRobot/examples/RobotViewer). 
 \par
@@ -292,7 +291,7 @@ This minimal example shows how to define a robot. The file can be found in the d
 \end{lstlisting}
 \includegraphics[width=\textwidth]{Tutorial1}
 \par
-\subsubsection{Visualizations}
+\subsection{Visualizations}
 \par
 Now we add a visualization. In the following example, the Coin3D/Qt visualization support is used, indicated by the type="Inventor" attribute of the visualization's File tag (in case OpenSceneGraph is used for 3D-model importing and visualization, the attribute would be type="osg"). The location of the joint.iv file is given relatively to the location of the XML file, so that the directory iv is searched for the file joint.iv. 
 \begin{lstlisting}
@@ -324,7 +323,7 @@ Separator {
 \end{lstlisting}
 \includegraphics[width=\textwidth]{Tutorial2}
 \par
-\subsubsection{Joints}
+\subsection{Joints}
 \par
 In this example the robot gets a movable joint. The Joint type is specified with the revolute attribute and the rotation axis. The Transform tag specifies a fixed transformation that is applied before the joint. Hence, a RobotNode may imply two transformations:
 \begin{description}
@@ -367,7 +366,7 @@ In this example the robot gets a movable joint. The Joint type is specified with
 
 \par
 
-\subsubsection{Kinematic Chains}
+\subsection{Kinematic Chains}
 \par
 Now we build a longer kinematic chain by connecting multiple RobotNodes. Some of the nodes are fixed (no Joint tag), while others can be moved indicated by a <Joint type="revolute'> definition. 
 \par
@@ -440,7 +439,7 @@ Now we build a longer kinematic chain by connecting multiple RobotNodes. Some of
 	\end{minipage}
 \end{figure}
 \par
-\subsubsection{Denavit-Hartenberg Parameters}
+\subsection{Denavit-Hartenberg Parameters}
 \par
 A joint can also be definied with Denavit Hartenberg paramters. Therefore the DH tag with the two translational attributes a, d and with both rotational attributes alpha and theta can be used. Please note that you have to specify the units in which the rotation is given (degree or radian). Further, the Limits tag is used to specify the lower and upper joint limits. 
 \begin{lstlisting}
@@ -499,7 +498,7 @@ A joint can also be definied with Denavit Hartenberg paramters. Therefore the DH
 	\end{minipage}
 \end{figure}
 \par
-\subsubsection{Coordinate Systems}
+\subsection{Coordinate Systems}
 \par
 A RobotNode may cover several transformations.
 \par
@@ -510,7 +509,7 @@ A RobotNode may cover several transformations.
    \par
    The GlobalPose of a RobotNode is always the pose that is retrieved after applying all transformations. 
    \par
-\subsubsection{Collision Models}
+\subsection{Collision Models}
 \par
 In the following example a finger is modeled with DH parameters. Additionally to the 3D models, the CollisionModel tag is used to specify visualization files that should be used for collision detection. The CollisionModels will automatically be used whenever collision detection is performed, hence usually reduced models are used in order to speed up the collision detection. If the visualization models should be used for collision detection as well you can use the <UseAsCollisionModel/> tag within a <VisualizationModel> definition, in order to avoid loading the 3D model twice. Further, bounding boxes can be automatically created to be used as CollisionModels. Therefore you have to use the attribute boundingbox="true" within the CollisionModel's File tag. 
 \par
@@ -602,7 +601,7 @@ In the following example a finger is modeled with DH parameters. Additionally to
 	\end{minipage}
 \end{figure}
 \par
-\subsubsection{Multiple Files}
+\subsection{Multiple Files}
 \par
 When building complex robot models, usually several parts of the robot can be separated. In order to reflect this fact, robots can be assembled from multiple files. In the following example a robot imports another robot and connects the root node to Joint1. Further, you can see how coordinate axis visualizations are enabled and that a RobotNode can have multiple children, allowing to build tree-like kinematic structures. 
 \par
@@ -671,7 +670,7 @@ The second file (robot howto7b.xml) looks like this. The file can also be used a
  	\end{minipage}
  \end{figure}
  \par
-\subsubsection{Robot Node Sets}
+\subsection{Robot Node Sets}
 \par
 In VirtualRobot so-called RobotNodeSets are used to group joints or to define kinematic chains. A robot node set consists of a set of robot nodes and optionally
 \begin{description}
@@ -765,7 +764,7 @@ In VirtualRobot so-called RobotNodeSets are used to group joints or to define ki
 	\end{minipage}
 \end{figure}
 \par
-\subsubsection{End Effector Definitions}
+\subsection{End Effector Definitions}
 When complex robot systems, such as humanoid robots, should be modeled a logical definition of their end-effectors is helpful especially in the context of grasp and manipulation planning. In order to access the robot's end-effector conveniently it can be defined in the robot's XML definition. An end-effector is a logical collection of static RobtoNodes and so-called actors which are lists of RobotNodes defining a finger. Please note that the RobotNodes have to be defined within the robot's XML definition. The static parts are not moved when the end-effector is accessed (e.g. closed or opened), whereas the actors are moved. As shown in the example below, actors consist of a set of RobotNodes and for each node several options can be specified:
 \begin{itemize}
   \item name: The name string of the RobotNode. This node must be present in the robot's definition. 
@@ -840,7 +839,7 @@ When complex robot systems, such as humanoid robots, should be modeled a logical
 	%\hspace{.05\linewidth}
 \end{figure}
 \par
-\subsubsection{Objects and Scenes}
+\subsection{Objects and Scenes}
 \par
 Scenes can be defined via XML files, allowing to specify a setup for robots and obstacles. Further, configurations can be defined allowing to easily access them later on. The following tags can be used: 
 \begin{itemize}
@@ -920,29 +919,29 @@ Scenes can be defined via XML files, allowing to specify a setup for robots and 
 \par
 \includegraphics[width=\textwidth]{Tutorial10}
 \par
-\subsection{Virtual Robot: The robot library}
+\section{Virtual Robot: The robot library}
 Once a robot and/or scene information are created , one can load and access the data via the VirtualRobot library. The C++ API offers convenient access, which is described in the following sections. 
 \par
-\subsubsection{Preliminaries}
+\subsection{Preliminaries}
 We start with a brief introduction, showing how some internals are organized 
 \par
-\subsubsection*{Shared Pointers}
+\subsubsection{Shared Pointers}
 Simox uses boost's shared pointers (also called smart pointers) in order to avoid memory leaks. If you are not familiar with shared pointer have a look at the official boost reference page: http://boost.org/libs/smart\_ptr/smart\_ptr.htm. In order to achieve a better readability of the source code, the following commonly used typedef is used for defining pointers: 
 \begin{lstlisting}
 typedef boost::shared_ptr<class> classPtr;
 \end{lstlisting}
 Hence the pointer to an instance of a VirtualRobot::Robot object can be written as VirtualRobot::RobotPtr (instead of the long version boost::shared\_ptr<VirtualRobot::Robot>). Please note, that you never need to delete a pointer, since the smart pointer's reference counting system does this for you. 
-\subsubsection*{Matrices and Poses}
+\subsubsection{Matrices and Poses}
 Internally poses (which consist of a location and orientation) are handled with homogeneous 4x4 matrices. Therefore, the Eigen::Matrix4f type is used. Further information can be found at http://eigen.tuxfamily.org. 
 \par
-\subsubsection*{Namespaces}
+\subsubsection{Namespaces}
 In Simox three namespaces are defined: 
 \begin{itemize}
 \item VirtualRobot
 \item Saba
 \item GraspStudio
 \end{itemize}
-\subsubsection*{VirtualRobot::RuntimeEnvironmentt}
+\subsubsection{VirtualRobot::RuntimeEnvironmentt}
 Several paths to data files are defined during the compilation process (E.g. the main data directory SimoxDir/VirtualRobot/data containing robot models, obstacles and precomputed grasp sets). Further, it is possible to add custom paths to the list of data paths in order to avoid absolute path names during execution. A data path can be set with 
 \begin{lstlisting}
 VirtualRobot::RuntimeEnvironment::addDataPath("/path/to/add");
@@ -982,9 +981,9 @@ int main(int argc, char *argv[])
     //...
 }
 \end{lstlisting}
-\subsubsection*{VirtualRobot::SceneObject}
+\subsubsection{VirtualRobot::SceneObject}
 All objects in VirtualRobot that may have a visualization (e.g. Robots, RobotNodes, Obstacles) are derived from the class SceneObject, which allows a hierarchical scene representation. SceneObjects may have children which are automatically updated/positioned when the parent is moved.
-\subsubsection{Accessing a Robot}
+\subsection{Accessing a Robot}
 A robot can be loaded as follows:
 \begin{lstlisting}
 VirtualRobot::RobotPtr robot;
@@ -996,7 +995,7 @@ try
     std::cout << "Error: " << e.what() << std::endl;
 }
 \end{lstlisting}
-\subsubsection*{RobotNodes: Accessing joints}
+\subsubsection{RobotNodes: Accessing joints}
 A RobotNode can be retrieved with
 \begin{lstlisting}
 VirtualRobot::RobotNodePtr rn = robot->getRobotNode("name of robot node");
@@ -1013,7 +1012,7 @@ The pose of the RobotNode's coordiante system can be retrieved with
 \begin{lstlisting}
 Eigen::Matrix4f p = rn->getGlobalPose();
 \end{lstlisting}
-\subsubsection*{RobotConfig: Configurations of the robot}
+\subsubsection{RobotConfig: Configurations of the robot}
 A RobotConfig represents a name,value map of joint values.
 \begin{lstlisting}
 // Consider all RobotNodes
@@ -1021,7 +1020,7 @@ RobotConfigPtr c = robot->getConfig();
 c->setConfig("joint 1", 0.5f);
 robot->setConfig(c);
 \end{lstlisting}
-\subsubsection*{RobotNodeSets}
+\subsubsection{RobotNodeSets}
 A set of RobotNodes defined in the robot's XML file can be accessed with
 \begin{lstlisting}
 VirtualRobot::RobotNodeSetPtr rns = robot->getRobotNodeSet("name of robot node set");
@@ -1032,7 +1031,7 @@ When a kinematic chain is defined via a RobotNodeSet, its TCP node can be retrie
 \begin{lstlisting}
 VirtualRobot::RobotNodePtr tcp = rns->getTCP();
 \end{lstlisting}
-\subsubsection*{Coordinate Transformations}
+\subsubsection{Coordinate Transformations}
 Usually poses of objects and RobotNodes are given in the global coordinate system, but they can be transformed to local coordinate systems of other objects and vice versa. E.g. an object's position can be transformed to the hand coordinate system. 
 \begin{lstlisting}
 Eigen::Matrix4f localObjectPose robotNodeHand->toLocalCoordinateSystem(poseObjectGlobal);
@@ -1041,7 +1040,7 @@ In the following example the visually localized pose of a hand, given in the cam
 \begin{lstlisting}
 Eigen::Matrix4f globalHandPose robotNodeEyeLeft->toGlobalCoordinateSystem(localHandPose);
 \end{lstlisting}
-\subsubsection*{End Effectors}
+\subsubsection{End Effectors}
 An end effector, defined in the XML file of a robot, can be accessed as follows: 
 \begin{lstlisting}
 VirtualRobot::EndEffectorPtr eef = robot->getEndEffector("name of eef");
@@ -1073,7 +1072,7 @@ std::vector<VirtualRobot::EndEffector::ContactInfo> contacts = eef->closeActors(
 \end{figure}	
 
 \par
-\subsubsection{Obstacles and Grasps}
+\subsection{Obstacles and Grasps}
 Simple obstacles can be created as follows: 
 \begin{lstlisting}
 VirtualRobot::ObstaclePtr box = VirtualRobot::Obstacle::createBox(30.0f,30.0f,30.0f); // in mm
@@ -1131,9 +1130,9 @@ std::vector<VirtualRobot::SceneObjectSetPtr> objectSets = scene->getSceneObjectS
 	  \includegraphics[width=\linewidth]{Tutorial10}
 	\end{minipage}	
 \end{figure}
-\subsubsection{Visualization}
+\subsection{Visualization}
 Depending on the cmake setup, different visualization engines can be used. Currently Coin3D is fully supported. Additionally, an exemplary implementation for OpenSceneGraph is provided, but not all visualization features are supported right now.
-\subsubsection*{Open Inventor / Coin3D (recommended)}
+\subsubsection{Open Inventor / Coin3D (recommended)}
 To use Coin3D's Open Inventor API we recommend to perform a setup together with Qt and SoQt (a Coin3D library that allows to easily render OpenInventor scenes to a Qt widget).\par
 For this example, we assume that you have created an Qt-UI class (e.g. with QtDesigner) that holds an empty Qt::Frame named frameViewer.\par
 The following code examples are taken from the VirtualRobot example RobotViewer. 
@@ -1174,7 +1173,7 @@ The following code examples are taken from the VirtualRobot example RobotViewer.
 \end{lstlisting}
 \end{itemize}
 
-\subsubsection*{OpenSceneGraph}
+\subsubsection{OpenSceneGraph}
 A robot and objects can be visualized in a Qt window using the VirtualRobot::osgViewerWidget class. This widget supports OSG renderings and it can be embedded in an Qt::Frame (you can setup your window with QtDesigner and add an empty Frame that is accessed from the code).
 \par
 The following code examples are taken from the VirtualRobot example RobotViewerOSG. 
@@ -1202,16 +1201,16 @@ The following code examples are taken from the VirtualRobot example RobotViewerO
     osgRobot->addChild(visualisationNode);
 \end{lstlisting}
 \end{itemize}
-\subsubsection{Collision Detection}
+\subsection{Collision Detection}
 Collision Detection is a crucial part of any sampling-based motion planning algorithm. Hence, Simox takes special care of efficiently handling collision and distance queries. 
 \par
-\subsubsection*{Collision Engine}
+\subsubsection{Collision Engine}
 \par
 Simox allows to exchange the collision detection engine. By default a slightly updated version of the efficient and reliable library PQP is used. The sources are shipped with simox and the compilation process is handled by cmake, so there is no need of installing PQP on your own. An advantage of PQP is, that no prerequisites have to be met by the model representation as long as they exist as a set of triangles. PQP handles unordered sets of triangles with high efficiency.
 \par
 If you intend to use a different collision engine have a look at the sources in VirtualRobot/CollisionDetection. 
 \par
-\subsubsection*{Collision Checker}
+\subsubsection{Collision Checker}
 \par
 In Simox a global collision checker singleton exists that can be accessed as follows: 
 \begin{lstlisting}
@@ -1219,12 +1218,12 @@ VirtualRobot::CollisionCheckerPtr collisionChecker = VirtualRobot::CollisionChec
 \end{lstlisting}
 If you do not plan to implement multi-threaded collision queries, this collision checker object is all you need. 
 \par
-\subsubsection*{Collision Models}
+\subsubsection{Collision Models}
 All models (Objects, Obstacles, Robots, RobotNodes, etc) in Simox have two 3D representations. One for visualization (high def) and one for collision detection purposes (low def). You can visualize the models as well as the internal triangulated data structure by passing teh corresponding VirtualRobot::SceneObject::VisualizationType flag (Full, Collison, CollisionData) to the visualization routines. The collision models are usually defined in the robot's or object's XML description file. You can access them with: 
 \begin{lstlisting}
 VirtualRobot::CollisionModelPtr colModel = object->getCollisionModel();
 \end{lstlisting}
-\subsubsection*{Collision and Distance Queries}
+\subsubsection{Collision and Distance Queries}
 The collision checker can be asked if two models are in collision or not:  
 \begin{lstlisting}
 bool inCollision = collisionChecker->checkCollision(colModel1,colModel2);
@@ -1247,7 +1246,7 @@ VirtualRobot::ObstacleSetPtr obstacles = scene->getSceneObjectSet("All Obstacles
 VirtualRobot::RobotNodeSetPtr kinChain = robot->getRobotNodeSet("Left Arm");
 float minDist = collisionChecker->calculateDistance(kinChain,obstacles);
 \end{lstlisting}
-\subsubsection*{Complex Collision Setups}
+\subsubsection{Complex Collision Setups}
 Complex collision queries can be handled with the VirtualRobot::CDManager class. Here multiple pairs of object(s) can be specified which all should be checked for validity. This can be useful when multiple parts of a robot have to be considered, e.g. for motion planning.
 \par
 In the following example an obstacle and a robot node are selected for collision detection. Additionally any self collisions between the kinematic structures of the arm and the torso and head should be considered.  
@@ -1258,7 +1257,7 @@ cdm->addCollisionPair(rnsArm,rnsTorso);
 cdm->addCollisionPair(rnsArm,rnsHead);
 bool inCollision = cdm->isInCollision();
 \end{lstlisting}
-\subsubsection{Workspace Analysis: Reachability and Manipulability}
+\subsection{Workspace Analysis: Reachability and Manipulability}
  A representation of the spatial reachability of a robot's manipulator can be precomputed in order to efficiently search for reachable grasps/poses during online processing. To this end a 6D voxel grid is filled, either with binary values (reachable/not reachable) or with quality information that indicates how well a pose can be reached. E.g. the manipulability can be used as such a quality measure.
 \par
 From the base class for performing workspace analysis WorkspaceRepresentation, currently two derivations exist: 
@@ -1377,7 +1376,7 @@ The `ReachabilityMap` tool can be used to examine the behavior of this approach.
 	%\hspace{.05\linewidth}
 \end{figure}
 \end{itemize}
-\subsubsection{Jacobians and IK solving}
+\subsection{Jacobians and IK solving}
 Simox provides a generic IK solver, which is based on the Jacobian's Pseudoinverse approach. The IK solver is instantiated with a kinematic chain and it can be queired for 3D or 6D poses. The GenericIKDemo and JacobiDemo provide exemplary implementations. Here is a short example:
 \begin{lstlisting}
 RobotNodeSetPtr kc = robot->getRobotNodeSet("Left Arm");
@@ -1428,7 +1427,7 @@ Eigen::MatrixXf jac = j->getJacobianMatrix();
 Eigen::MatrixXf jacI = j->getPseudoInverseJacobianMatrix(tcp, IKSolver::All);
 \end{lstlisting}
 \includegraphics[width=\textwidth]{IKDemo}
-\subsubsection{Hierarchical IK solving}
+\subsection{Hierarchical IK solving}
 Complex robot systems usually have to meet multiple objectives for IK solving. Such objectives could include stability, feet postures, eef positions, etc. Simox provides methods for hierarchical IK solving, where a stack of tasks is processed by solving each task in the Null Space of the preceding tasks. Therefore JoacobiProviders are implemented for several objectives like pose reaching and stability. The framework is extendable and allows to implement custom JacobiProvides in order to combine them for hierarchical IK solving.
 \begin{lstlisting}
 HierarchicalIKPtr hik(new HierarchicalIK(rnsJointsAll));
@@ -1468,7 +1467,7 @@ jv += delta;
 rnsJointsAll->setJointValues(jv);
 \end{lstlisting}
 \includegraphics[width=\textwidth]{HierarchicalIK}
-\subsubsection{Stability computations}
+\subsection{Stability computations}
 The StabilityDemo shows an exemplary usage of stability related methods.\par
 
 The center of mass of a robot (or a RobotNodeSet) can be queried as follows: 
@@ -1503,12 +1502,12 @@ comIK.setGoal(CoMTarget);
 comIK.solveIK(0.3f,0,20);
 \end{lstlisting}
 \includegraphics[width=\textwidth]{StabilityDemo}
-\subsection{File formats}
-\subsubsection{XSD Schema defintion}
+\section{File formats}
+\subsection{XSD Schema defintion}
 Simox provides an XSD Schema defintion file that can be used to validate XML defintions and/or for documentation purposes. The file can be found in $<$Your\_Simox\_Dir>/doc/file\_formats.
 \par
 Note, that XSD definitions are case sensitive, while Simox does not consider the case while parsing XML tags. So the tags <RobotNode>, <robotnode> and <ROBOTNODE> are all starting a valid RobotNode definition. 
-\subsubsection*{Types}
+\subsubsection{Types}
 The following types are used: 
 \begin{itemize}
 \item xs:string 
@@ -1520,7 +1519,7 @@ The following types are used:
 \item Unit-Time-Type: A string that could be "sec", "second", "min", "minute", "h" or "hour"
 \item FileLocation-Type: A string that is either "absolute" or "relative", specifying whether a filename is given absolutely or relatively to the current XML file. 
 \end{itemize}
-\subsubsection*{Transformations}
+\subsubsection{Transformations}
 Geometric transformations can be specified in several ways, which are encapsulated by a <Transform-Type>. Note, that either a Matrix4x4 or a rotation (Quaternion, Matrix3x3 or RollPitchYaw) together with a Translation can be used. 
 \begin{itemize}
 \item Matrix4x4-Type. A homogeneous transformation given as a 4x4 matrix. Here is an example:
@@ -1553,9 +1552,9 @@ Geometric transformations can be specified in several ways, which are encapsulat
  <Translation x="100" y="200" z="300" unitsLength="mm"/>
 \end{lstlisting}
 \end{itemize}
-\subsubsection{Robot Definitions}
+\subsection{Robot Definitions}
 \includegraphics[width=\textwidth]{Xsd_Robot}
-\subsubsection*{RobotNode}
+\subsubsection{RobotNode}
 A RobotNode can specify
 \begin{itemize}
 \item A fixed Transformation (optional <Transform> tag). 
@@ -1564,7 +1563,7 @@ A RobotNode can specify
 \item A collision model which is used for collision detection (optional <CollisionModel> tag). 
 \end{itemize}
 \includegraphics[width=\textwidth]{Xsd_RobotNode2}
-\subsubsection*{Joint}
+\subsubsection{Joint}
 For each Joint tag the type has to be specified: Currently the following Joint-types are implemented:
 \begin{itemize}
 \item fixed (standard): A fixed joint that cannot be moved. This joint type is implicitly chosen when no joint is specified within a RobotNode.
@@ -1574,10 +1573,10 @@ For each Joint tag the type has to be specified: Currently the following Joint-t
 As shown below, Joints can be defined either with Denavit-Hartenberg conventions (<DH>), or by defining transformations (<Axis> or <TranslationDirection>). A valid Joint definition must either be defined the first or the second way; mixing is not allowed and will result in an exception during parsing.
 \includegraphics[width=\textwidth]{Xsd_Joint2}    
 
-\subsubsection*{Physics}
+\subsubsection{Physics}
 The Coord-Location-type is a string that specifies where the CoM is located. When it's set to "VisualizationBBoxCenter" the CoM location is automatically set to the center of the bounding box of the RobotNode's visualization and the other attributes are ignored. If set to "joint", the CoM location is defined by the x,y,z attributes in the joint's coordinate system. 
 \includegraphics[width=\textwidth]{Xsd_Physics} 
-\subsubsection*{Visualization}
+\subsubsection{Visualization}
 \includegraphics[width=\textwidth]{Visualization} 
 Here is an example:
 \begin{lstlisting}
@@ -1602,14 +1601,14 @@ Here is an example:
         </Visualization>
     </ManipulationObject>
 \end{lstlisting}
-\subsubsection*{CollisionModel}
+\subsubsection{CollisionModel}
 \includegraphics[width=\textwidth]{Xsd_CollisionModel} 
-\subsubsection*{Sensor}
+\subsubsection{Sensor}
 Sensors are located w.r.t. the coordinate system of the RobotNode and can additionally define a local transformation. Currently two types of sensors are implemented: Position and Camera. 
 \includegraphics[width=\textwidth]{Xsd_Sensor} 
-\subsubsection*{RobotNodeSet}
+\subsubsection{RobotNodeSet}
 \includegraphics[width=\textwidth]{Xsd_RobotNodeSet} 
-\subsubsection*{EndEffector}
+\subsubsection{EndEffector}
 The EEFActorCollision-Type specifies if and how the element of an finger/actor should be considered for collision detection. The string attribute can be 
 \begin{itemize}
 \item None: No collision detection should be performed with this segment. 
@@ -1618,7 +1617,7 @@ The EEFActorCollision-Type specifies if and how the element of an finger/actor s
 \item All: Collision detection is performed with all other actors and the static part. 
 \end{itemize}
 \includegraphics[width=\textwidth]{Xsd_EEF_open} 
-\subsubsection{Obstacles and Manipulation Objects}
+\subsection{Obstacles and Manipulation Objects}
 Obstacles are defined in the following way
 \begin{lstlisting}
     <Obstacle name='MyObstacle'>
@@ -1660,7 +1659,7 @@ Here is an example:
     </ManipulationObject>
 \end{lstlisting}
 You can examine Objects and ManipulationObjects directly with the Simox tool SimoxSceneViewer.
-\subsubsection{Scenes}
+\subsection{Scenes}
 Scenes are specified in the Simox scene file format, which is a straight forward definition of an environment consisting of robot(s) and/or obstacles. You can link to existing Robot/Obstacle/ManipulationObject files and you are allowed to add further information.
 \par
 The following example shows 
@@ -1714,11 +1713,11 @@ The following example shows
 </Scene>
 \end{lstlisting}
 The tool SimoxSceneViewer allows you to inspect a scene. Additionally, trajectories can be stored in scene files (an exmaple can be found at VirtualRobot/data/scenes/examples/SceneViewer).
-\section{Inside the Saba Library}
-\section{Inside the Grasp Studio}
+\chapter{Inside the Saba Library}
+\chapter{Inside the Grasp Studio}
 GraspStudio offers possibilities to compute the grasp quality for generic end-effector definitions, e.g. a humanoid hand. The implemented 6D wrench-space computations can be used to easily (and quickly) determine the quality of an applied grasp to an object. Furthermore, the implemented planners are able to generate grasp maps for given objects automatically. \par GraspStudio is a library that closely incorporates with VirtualRobot and which can be used for efficient grasp planning. Based on a robot defined in VirtualRobot, any end effector can be decoupled from the model and considered for grasp planning. \par The Grasp Center Point (GCP) of an end effector defines the favorite grasping position and an approach direction. A grasp planner interface is provided, which is used for the implementation of a generic grasp planner. This generic grasp planner mainly relies on two exchangeable functionalities: A generator for building grasping hypothesis and a grasp evaluation component.
 
-\subsection{The Generic Grasp Planner}
+\section{The Generic Grasp Planner}
 In the following setup, it is showed how the generic grasp planner can be setup and used for planning feasible grasps. 
 \begin{lstlisting}
 // load robot
@@ -1733,7 +1732,7 @@ eef->setPreshape("Grasp Preshape");
 // load object
 VirtualRobot::ManipulationObjectPtr object =ObjectIO::loadManipulationObject("MashedPotatoes.xml");
 \end{lstlisting}
-\subsection{Setup the Grasp Planner}
+\section{Setup the Grasp Planner}
 To setup the grasp planner, firstly a quality measure module (GraspQualityMeasureWrenchSpace) and a grasp hypotheses generator (ApproachMovementSurfaceNormal) are built. These objects are passed to the generic grasp planner together with some parameters. 
 \begin{lstlisting}
 GraspStudio::GraspQualityMeasureWrenchSpacePtr qualityMeasure(new GraspStudio::GraspQualityMeasureWrenchSpace(object));
@@ -1750,7 +1749,7 @@ VirtualRobot::GraspSetPtr grasps(new VirtualRobot::GraspSet("my new grasp set",r
 GraspStudio::GenericGraspPlannerPtr planner(new GraspStudio::GenericGraspPlanner(grasps, qualityMeasure, approach, 0.2, true));
 \end{lstlisting}
 \includegraphics[width=\textwidth]{GraspPlanner}
-\subsection{Plan a Grasp}
+\section{Plan a Grasp}
 Grasps can now be planned by calling the plan method of the grasp planner object. Depending on the parameters specified on construction, the grasp planner tries to create the specified number of grasps while respecting the timeout in milliseconds. 
 \begin{lstlisting}
 // Search one grasp with a timeout of 1000 milliseconds
@@ -1776,7 +1775,7 @@ bool isFC = qualityMeasure->isGraspForceClosure();
 std::vector< VirtualRobot::EndEffector::ContactInfo > contacts = eefCloned->getEndEffector("Left Hand")->closeActors(object);
 \end{lstlisting}
 \includegraphics[width=\textwidth]{GraspPlanner1}
-\subsection{Store a Set of Grasps}
+\section{Store a Set of Grasps}
 Grasps can be easily managed by ManipulationObjects, as shown in the following example. A new object is created and cloned instances of the visualization and the collision model are passed to the constructor. Then the set of planned grasps is added and the object is stored to an XML file. The XML file will contain the filename of the visualization model and all grasping information.
 \begin{lstlisting}
 // create a new object, pass cloned visualizations and collision models to it.
