@@ -1,37 +1,5 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Vertical Line Title Page 
-% LaTeX Template
-% Version 1.0 (27/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Peter Wilson (herries.press@earthlink.net)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-% 
-% Instructions for using this template:
-% This title page compiles as is. If you wish to include this title page in 
-% another document, you will need to copy everything before 
-% \begin{document} into the preamble of your document. The title page is
-% then included using \titleGM within your document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass{book}
-
 \newcommand*{\plogo}{\fbox{$\mathcal{PL}$}} % Generic publisher logo
-
-%----------------------------------------------------------------------------------------
-%	TITLE PAGE
-%----------------------------------------------------------------------------------------
-
 \newcommand*{\titleGM}{\begingroup % Create the command for including the title page in the document
 \hbox{ % Horizontal box
 \hspace*{0.2\textwidth} % Whitespace to the left of the title page
@@ -39,18 +7,19 @@
 \hspace*{0.05\textwidth} % Whitespace between the vertical line and title page text
 \parbox[b]{0.75\textwidth}{ % Paragraph box which restricts text to less than the width of the page
 
-{\noindent\Huge\bfseries The Simox Robotics Grasp Planner Library\\[0.5\baselineskip] \LaTeX ~Pandora@home}\\[2\baselineskip] % Title
-{\large \textit{Programmers Manual}}\\[4\baselineskip] % Tagline or further description
-{\Large \textsc{Kalogiannis Grigorios}} % Author name
-
+{\noindent\Huge\bfseries The Simox Robotics Toolkit\\[0.5\baselineskip]}\\[2\baselineskip] % Title
+{\LARGE \textit{User's Manual}}\\[1\baselineskip] % Tagline or further description
+{\LARGE \textit{Programmer's Manual}}\\[4\baselineskip] % Tagline or further description
+{\large \textsc{Kalogiannis Grigorios}\\} % Author name
+{\small \textsc{Electrical and Computer Engineer - MSc}\\} % Author name
+{\small \textsc{Phd Candidate}\\} % Author name
 \vspace{0.5\textheight} % Whitespace between the title block and the publisher
-{\noindent Automation and Robotics Laboratory - Pandora@home \plogo}\\[\baselineskip] % Publisher and logo
+{\\
+\noindent Automation and Robotics Laboratory - AUTh }\\[\baselineskip] % Publisher and logo
 }}
 \endgroup}
 
-%----------------------------------------------------------------------------------------
-%	BLANK DOCUMENT
-%----------------------------------------------------------------------------------------
+
 \setcounter{secnumdepth}{5}
 \usepackage{amsmath}
 \usepackage{amssymb} % mathbb{}
@@ -69,6 +38,8 @@
 \usepackage{enumitem}
 \usepackage{subfloat}
 \usepackage{float}
+\usepackage{amsthm} % newtheorem
+\usepackage{ragged2e}
 \pagenumbering{roman}
 \lstset { %
 frame=single,
@@ -85,16 +56,28 @@ frame=single,
 \graphicspath{ {fig/} } % define default path for figures
 \newcommand{\inr}[1]{\in \mathbb{R}^#1}
 
-\usepackage{amsthm} % newtheorem
 \newtheorem{definition}{Definition}[section]
 \newtheorem*{remark}{Remark}
-\newpage
-\begin{document}
 
+\begin{document}
+\thispagestyle{empty}
 \titleGM % This command includes the title page
+      
 \tableofcontents
-\newpage
 \pagenumbering{arabic}
+\newpage
+\thispagestyle{empty}
+
+\section*{Acknowledgements}
+This document was based on the wiki documentation of Simox Robotics Toolkit \\(https://gitlab.com/Simox/simox).
+\par 
+It contains all the necessary information regarding how to install, use and handle the functionality that Simox Robotics Toolkit provides.
+It also includes several examples and test cases.
+It was created for needs of Pandora's Robotic Team (Pandora@home).
+\par
+Updates and tex code for this document can be found on Github \\(www.github.com/gkalogiannis/simox-manual)
+\par
+Simox comes under GNU Library General Public License,(version 2.1 or any later version), Copyright 2015 Nikolaus Vahrenkamp
 \chapter{Introduction}
 
 \section{Robotic grasping}
@@ -204,27 +187,26 @@ Simox is tested on several Ubuntu platforms and there shouldn't be any problems 
 sudo apt-get install build-essential libboost-all-dev libeigen3-dev libsoqt4-dev libcoin80-dev cmake cmake-gui libqt4-dev subversion
 \end{lstlisting}
 \section{Windows}
-On Windows we recommend the Visual Studio series for development. Microsoft provides a free version, the Visual Studio Express Edition: http://www.microsoft.com/visualstudio/en-us/products/2010-editions/express. (todo: maybe the platform SDK or the Windows SDK have to installed with the VS express edition.) 
+On Windows we recommend the Visual Studio series for development. Microsoft provides a free version, the Visual Studio Express Edition: \\http://www.microsoft.com/visualstudio/en-us/products/2010-editions/express. 
 \subsection{IDE / Compiler}
 \subsection{Download and install dependencies}
 \begin{itemize}
 
-\item[$\bullet$]CMake can be installed with the provided installer: http://www.cmake.org/cmake/resources/software.html
-\item[$\bullet$]Boost binaries for windows can be found here: http://sourceforge.net/projects/boost/files/boost-binaries/ or you can build the libraries from source: http://www.boost.org 
-\item[$\bullet$]Eigen is a header-only library that can be found here: http://eigen.tuxfamily.org. Eigen must not be configured or installed, it's enough to extract the files. 
-\item[$\bullet$]Qt can be installed via the Qt SDK installer: http://qt-project.org/downloads. With Visual Studio versions above VS2010 you may need to compile Qt by hand. Use the latest src packege from here https://download.qt.io/official\_releases/qt/4.8/4.8.7/
-\item[$\bullet$]Coin3D: Coin3D can be found at https://bitbucket.org/Coin3D/coin/wiki/Home The version 3.1.3 comes with a VS9 solution (located at build/msvc9/). For VS10+ you need to adapt some minor things (see below). Don't forget to set the COINDIR environment variable before building the install project.
+\item[$\bullet$]CMake can be installed with the provided installer: \\http://www.cmake.org/cmake/resources/software.html
+\item[$\bullet$]Boost binaries for windows can be found here: \\http://sourceforge.net/projects/boost/files/boost-binaries/ or you can build the libraries from source: \\http://www.boost.org 
+\item[$\bullet$]Eigen is a header-only library that can be found here: \\http://eigen.tuxfamily.org. Eigen must not be configured or installed, it's enough to extract the files. 
+\item[$\bullet$]Qt can be installed via the Qt SDK installer: \\http://qt-project.org/downloads. With Visual Studio versions above VS2010 you may need to compile Qt by hand. Use the latest src packege from here \\https://download.qt.io/official\_releases/qt/4.8/4.8.7/
+\item[$\bullet$]Coin3D: Coin3D can be found at \\https://bitbucket.org/Coin3D/coin/wiki/Home The version 3.1.3 comes with a VS9 solution (located at build/msvc9/). For VS10+ you need to adapt some minor things (see below). Don't forget to set the COINDIR environment variable before building the install project.
 \item[$\bullet$]SoQt: Can be found here: https://bitbucket.org/Coin3D/soqt Compile it (be sure the environment variable COINDIR is set properly). The current version (1.5.0) can be compiled with VS9 by using the solution file that is located in build/msvc9/soqt1.sln. 
-\item[$\bullet$]
-\end{itemize}If you run into troubles compiling Coin3D/SoQt have a look here: Coin3D\_Win\_Help
+\end{itemize}If you run into troubles compiling Coin3D/SoQt have a look here: \\Coin3D\_Win\_Help
 \subsection{Windows Environment Variables}
 In order to allow smooth development we recommend to setup your windows environment variables according to your installation. Check, if the following entries are present at your system: 
 \begin{itemize}
 
-\item[$\bullet$]BOOSTDIR -> the boost directory  
-\item[$\bullet$]COINDIR -> The Coin3D install directory   
-\item[$\bullet$]QTDIR -> The Qt directory 
-\item[$\bullet$]Simox\_DIR -> The directory where you checked out the simox source code.  
+\item[$\bullet$]BOOSTDIR : the boost directory  
+\item[$\bullet$]COINDIR : The Coin3D install directory   
+\item[$\bullet$]QTDIR : The Qt directory 
+\item[$\bullet$]Simox\_DIR : The directory where you checked out the simox source code.  
 \item[$\bullet$]The \textbf{Path} variable should contain the following entries:  
 \begin{itemize}
 \item[$\bullet$]\textbf{\%QTDIR\%\textbackslash bin}
@@ -261,7 +243,7 @@ Here is an exemplary setup with cmake-gui:\par
     ENDIF()
 \end{lstlisting}
 \end{itemize}
-
+    
 \chapter{Inside the VirtualRobot library}
 With the Virtual Robot library robots and environments can be specified and accessed via XML definitions. The structure of a robot is given by its joints (called RobotNodes) which are defined via Denavit-Hartenberg conventions or an easy-to-use "Translation+Rotation" scheme. The robot specification holds further information as name, joint limits, sensors, visualization and collision models. For convenient access kinematic chains and collections of collision models can be additionally defined. An instance of such a robot definition can be visualized by a viewer to show the current state of a robot. Furthermore, environments, obstacles and objects to manipulate can be defined and visualized. Thus it is possible to construct complex scenes used for simulation or planning and to store and load such scene definitions to/from XML files. The main features of the library are:
 \begin{description}
@@ -612,7 +594,8 @@ When building complex robot models, usually several parts of the robot can be se
         <Joint type="revolute">
             <Limits unit="degree" lo="-90" hi="45"/>
         </Joint>
-        <!-- Imports the kinematic structure form otherRobot.xml and adds otherRobot's rootnode as a child to this node -->
+        <!-- Imports the kinematic structure form otherRobot.xml... -->
+        <!-- and adds otherRobots rootnode as a child to this node -->
         <ChildFromRobot>
             <File importEEF="true">robot_howto7b.xml</File>
         </ChildFromRobot>
@@ -930,7 +913,7 @@ Simox uses boost's shared pointers (also called smart pointers) in order to avoi
 \begin{lstlisting}
 typedef boost::shared_ptr<class> classPtr;
 \end{lstlisting}
-Hence the pointer to an instance of a VirtualRobot::Robot object can be written as VirtualRobot::RobotPtr (instead of the long version boost::shared\_ptr<VirtualRobot::Robot>). Please note, that you never need to delete a pointer, since the smart pointer's reference counting system does this for you. 
+Hence the pointer to an instance of a VirtualRobot::Robot object can be written as VirtualRobot::RobotPtr (instead of the long version boost::shared\_ptr$<$VirtualRobot::Robot$>$). Please note, that you never need to delete a pointer, since the smart pointer's reference counting system does this for you. 
 \subsubsection{Matrices and Poses}
 Internally poses (which consist of a location and orientation) are handled with homogeneous 4x4 matrices. Therefore, the Eigen::Matrix4f type is used. Further information can be found at http://eigen.tuxfamily.org. 
 \par
@@ -1139,37 +1122,37 @@ The following code examples are taken from the VirtualRobot example RobotViewer.
 \begin{itemize}
 \item The following variables are needed to setup your environment. The Coin3D's SoSeparators are used to hold the Open Inventor data and the SoQtExaminerViewerSoQt class from the SoQt library is used to embed a Qt widget for rendering.
 \begin{lstlisting}
-	SoSeparator *sceneSep;
-    SoSeparator *robotSep;
-    boost::shared_ptr<VirtualRobot::CoinVisualization> visualization;
-    SoQtExaminerViewer *viewer;
+SoSeparator *sceneSep;
+SoSeparator *robotSep;
+boost::shared_ptr<VirtualRobot::CoinVisualization> visualization;
+SoQtExaminerViewer *viewer;
 \end{lstlisting}
 \item Initialization 
 \begin{lstlisting}
-    sceneSep = new SoSeparator;
-    sceneSep->ref();
-    robotSep = new SoSeparator;
-    sceneSep->addChild(robotSep);
-    viewer = new SoQtExaminerViewer(UI.frameViewer,"",TRUE,SoQtExaminerViewer::BUILD_POPUP);
-    // the following setting is needed if you want to visualize highlighted parts of the robot
-    viewer->setGLRenderAction(new SoLineHighlightRenderAction);
+sceneSep = new SoSeparator;
+sceneSep->ref();
+robotSep = new SoSeparator;
+sceneSep->addChild(robotSep);
+viewer = new SoQtExaminerViewer(UI.frameViewer,"",TRUE,SoQtExaminerViewer::BUILD_POPUP);
+// the following setting is needed if you want to visualize highlighted parts of the robot
+viewer->setGLRenderAction(new SoLineHighlightRenderAction);
 
 
-    // some optional parameters
-    viewer->setBackgroundColor(SbColor(1.0f, 1.0f, 1.0f));
-    viewer->setAccumulationBuffer(true);
-    viewer->setAntialiasing(true, 4);
-    viewer->setTransparencyType(SoGLRenderAction::SORTED_OBJECT_BLEND);
-    viewer->setFeedbackVisibility(true);
-    viewer->setSceneGraph(sceneSep);
-    viewer->viewAll();
+// some optional parameters
+viewer->setBackgroundColor(SbColor(1.0f, 1.0f, 1.0f));
+viewer->setAccumulationBuffer(true);
+viewer->setAntialiasing(true, 4);
+viewer->setTransparencyType(SoGLRenderAction::SORTED_OBJECT_BLEND);
+viewer->setFeedbackVisibility(true);
+viewer->setSceneGraph(sceneSep);
+viewer->viewAll();
 \end{lstlisting}
 \item A loaded robot can be added to the visualization as follows:
  \begin{lstlisting}
-    SceneObject::VisualizationType visuMode = SceneObject::Full;
-    visualization = robot->getVisualization<CoinVisualization>(visuMode);
-    SoNode* visualisationNode = visualisationNode = visualization->getCoinVisualization();
-    robotSep->addChild(visualisationNode);
+SceneObject::VisualizationType visuMode = SceneObject::Full;
+visualization = robot->getVisualization<CoinVisualization>(visuMode);
+SoNode* visualisationNode = visualisationNode = visualization->getCoinVisualization();
+robotSep->addChild(visualisationNode);
 \end{lstlisting}
 \end{itemize}
 
@@ -1219,7 +1202,11 @@ VirtualRobot::CollisionCheckerPtr collisionChecker = VirtualRobot::CollisionChec
 If you do not plan to implement multi-threaded collision queries, this collision checker object is all you need. 
 \par
 \subsubsection{Collision Models}
-All models (Objects, Obstacles, Robots, RobotNodes, etc) in Simox have two 3D representations. One for visualization (high def) and one for collision detection purposes (low def). You can visualize the models as well as the internal triangulated data structure by passing teh corresponding VirtualRobot::SceneObject::VisualizationType flag (Full, Collison, CollisionData) to the visualization routines. The collision models are usually defined in the robot's or object's XML description file. You can access them with: 
+All models (Objects, Obstacles, Robots, RobotNodes, etc) in Simox have two 3D representations. One for visualization (high def) and one for collision detection purposes (low def). You can visualize the models as well as the internal triangulated data structure by passing the corresponding \\
+\begin{lstlisting}
+VirtualRobot::SceneObject::VisualizationType 
+\end{lstlisting}
+flag (Full, Collison, CollisionData) to the visualization routines. The collision models are usually defined in the robot's or object's XML description file. You can access them with: 
 \begin{lstlisting}
 VirtualRobot::CollisionModelPtr colModel = object->getCollisionModel();
 \end{lstlisting}
@@ -1282,7 +1269,7 @@ Assuming a robot and a RobotNodeSet rns exist, an empty instance of the reachabi
         reachSpace->load("myReachFile.bin");
         reachSpace->print();
  \end{lstlisting}
- \item Querying  \par
+  \par
    The reachability data can be queried extremely fast. Here is an example: 
     \begin{lstlisting}
         // get all grasps that are reachable
@@ -1553,16 +1540,25 @@ Geometric transformations can be specified in several ways, which are encapsulat
 \end{lstlisting}
 \end{itemize}
 \subsection{Robot Definitions}
-\includegraphics[width=\textwidth]{Xsd_Robot}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{Xsd_Robot}
+\end{figure}
+
+
 \subsubsection{RobotNode}
 A RobotNode can specify
 \begin{itemize}
 \item A fixed Transformation (optional <Transform> tag). 
-\item A joint that applies a second transformation according to the joint value (optional <Joint> tag). 
-\item A visualization that is linked at the resulting pose (optional <Visualization> tag). 
-\item A collision model which is used for collision detection (optional <CollisionModel> tag). 
+\item A joint that applies a second transformation according to the joint value (optional $<$Joint$>$ tag). 
+\item A visualization that is linked at the resulting pose (optional $<$Visualization$>$ tag). 
+\item A collision model which is used for collision detection (optional $<$CollisionModel$>$ tag). 
 \end{itemize}
-\includegraphics[width=\textwidth]{Xsd_RobotNode2}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Xsd_RobotNode2}
+\end{figure}
+
 \subsubsection{Joint}
 For each Joint tag the type has to be specified: Currently the following Joint-types are implemented:
 \begin{itemize}
@@ -1570,14 +1566,25 @@ For each Joint tag the type has to be specified: Currently the following Joint-t
 \item  revolute: A revolute joint that can be rotated around an axis.
 \item prismatic: A prismatic joint that realizes a translational movement. 
 \end{itemize}
-As shown below, Joints can be defined either with Denavit-Hartenberg conventions (<DH>), or by defining transformations (<Axis> or <TranslationDirection>). A valid Joint definition must either be defined the first or the second way; mixing is not allowed and will result in an exception during parsing.
-\includegraphics[width=\textwidth]{Xsd_Joint2}    
+As shown below, Joints can be defined either with Denavit-Hartenberg conventions ($<$DH$>$), or by defining transformations ($<$Axis$>$ or $<$TranslationDirection$>$). A valid Joint definition must either be defined the first or the second way; mixing is not allowed and will result in an exception during parsing.
+\par
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Xsd_Joint2}
+\end{figure}
 
 \subsubsection{Physics}
 The Coord-Location-type is a string that specifies where the CoM is located. When it's set to "VisualizationBBoxCenter" the CoM location is automatically set to the center of the bounding box of the RobotNode's visualization and the other attributes are ignored. If set to "joint", the CoM location is defined by the x,y,z attributes in the joint's coordinate system. 
-\includegraphics[width=\textwidth]{Xsd_Physics} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Xsd_Physics}
+\end{figure}
 \subsubsection{Visualization}
-\includegraphics[width=\textwidth]{Visualization} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Visualization}
+\end{figure}
+
 Here is an example:
 \begin{lstlisting}
 <ManipulationObject name='MyObject'>
@@ -1602,12 +1609,24 @@ Here is an example:
     </ManipulationObject>
 \end{lstlisting}
 \subsubsection{CollisionModel}
-\includegraphics[width=\textwidth]{Xsd_CollisionModel} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Xsd_CollisionModel}
+\end{figure}
+
 \subsubsection{Sensor}
 Sensors are located w.r.t. the coordinate system of the RobotNode and can additionally define a local transformation. Currently two types of sensors are implemented: Position and Camera. 
-\includegraphics[width=\textwidth]{Xsd_Sensor} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Xsd_Sensor}
+\end{figure}
+
 \subsubsection{RobotNodeSet}
-\includegraphics[width=\textwidth]{Xsd_RobotNodeSet} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Xsd_RobotNodeSet}
+\end{figure}
+
 \subsubsection{EndEffector}
 The EEFActorCollision-Type specifies if and how the element of an finger/actor should be considered for collision detection. The string attribute can be 
 \begin{itemize}
@@ -1616,7 +1635,11 @@ The EEFActorCollision-Type specifies if and how the element of an finger/actor s
 \item Static: Collision detection is performed with the static part of the EEF. 
 \item All: Collision detection is performed with all other actors and the static part. 
 \end{itemize}
-\includegraphics[width=\textwidth]{Xsd_EEF_open} 
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Xsd_EEF_open}
+\end{figure}
+
 \subsection{Obstacles and Manipulation Objects}
 Obstacles are defined in the following way
 \begin{lstlisting}
@@ -1714,6 +1737,311 @@ The following example shows
 \end{lstlisting}
 The tool SimoxSceneViewer allows you to inspect a scene. Additionally, trajectories can be stored in scene files (an exmaple can be found at VirtualRobot/data/scenes/examples/SceneViewer).
 \chapter{Inside the Saba Library}
+With Saba collision-free motions for arbitrary kinematic chains (or loosely defined sets of joints) can be planned efficiently. Therefore an instance of a configuration space is used which usually is initialized with a RobotNodeSet that implicitly defines the number of DoF and the extends of the C-Space by the lower and upper joint limits. Further, a setup for collision detection must be defined as a logical set of object sets which should be checked against collisions. These sets may include parts of the robot (e.g. one arm, head and torso of a humanoid robot) and environmental obstacles.
+\par
+You can obtain further information by looking at the source code of the examples RrtGui and IKRRT. 
+\section{BiRrt Planner}
+In the following setup, an instance of a robot is assumed to be loaded and stored in robot. Further, RobotNodeSets (RNS) with name LeftArm, RightArmTorsoHead and LeftArmHand must be present. The first RNS is used for planning and implicitly defines the number of joints and hence, the number of dimensions of the C-Space. The other RNS are used for collision detection, where the RNS LeftArmHand covers all RobotNodes of the left arm and the hand and the RNS RightArmTorsoHead covers all static RobotNodes of the robot that should be considered for collision detection. 
+\begin{lstlisting}
+// load robot
+VirtualRobot::RobotPtr robot = VirtualRobot::RobotIO::loadRobot(filename);
+
+
+// create environment
+float posX=0.0f, posY=-400.0f, posZ=400.0f, sizeX=100.0f, sizeY=300.0f, sizeZ=1000.0f;
+VirtualRobot::ObstaclePtr obstacle = VirtualRobot::Obstacle::createBox( sizeX, sizeY, sizeZ );
+Eigen::Affine3f tr(Eigen::Translation3f(posX,posY,posZ));
+obstacle->setGlobalPose(tr.matrix());
+\end{lstlisting}
+\subsection{Collision Detection}
+Collision detection should be performed between the RNS of the left arm (with hand) and the static part of the robot. Additionally collisions with the environment should be considered. 
+\begin{lstlisting}
+// setup collision detection
+VirtualRobot::CDManagerPtr cdm(new VirtualRobot::CDManager());
+VirtualRobot::SceneObjectSetPtr robotArm = robot->getSceneObjectSet("LeftArmHand");
+VirtualRobot::SceneObjectSetPtr robotStatic = robot->getSceneObjectSet("RightArmTorsoHead");
+cdm->addCollisionModel(robotArm);
+cdm->addCollisionModel(robotStatic);
+cdm->addCollisionModel(obstacle);
+\end{lstlisting}
+\subsection{Configuration Space}
+In this example the CSpaceSampled, the main class for sampling-based motion planning, is used. The C-Space setup is performed by passing a RobotNodeSet to the constructor and setting sampling parameters. 
+\begin{lstlisting}
+VirtualRobot::RobotNodeSetPtr dof = robot->getRobotNodeSet("LeftArm");
+Saba::CSpaceSampledPtr cspace.reset(new CSpaceSampled(robot, cdm, dof);
+// set sampling parameter (used for extending a C-Space tree,e.g. with RRT-EXTEND)
+cspace->setSamplingSize(sampling_extend_stepsize);
+// set sampling size for discrete collision detection (used for path sampling)
+cspace->setSamplingSizeDCD(sampling_extend_stepsize);
+\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{PlanningBiRrt_ext_ext}
+\end{figure}
+\subsection{Planner}
+In this example a BiRRT planner is used. it is initialized with the CSpace and by setting the start and goal configuration. If motion planning was successful, the resulting trajectory can be obtained with the getSolution method. Further, the RRT data structures are retrieved. 
+\begin{lstlisting}
+Eigen::VectorXf start(dof->getSize());
+Eigen::VectorXf goal(dof->getSize());
+// set start ang goal
+...
+
+Saba::BiRrt rrt.reset(new Saba::BiRrt(cspace));
+rrt->setStart(start);
+rrt->setGoal(goal);
+bool ok = rrt->plan();
+if (!ok)
+    std::cout << "Planning failed..." << endl;
+else {
+    Saba::CSpacePathPtr solution = rrt->getSolution();
+    Saba::CSpaceTreePtr tree = rrt->getTree();
+    Saba::CSpaceTreePtr tree2 = rrt->getTree2();
+}
+\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{PlanningBiRrt1}
+\end{figure}
+
+\subsection{Visualization}
+In this example, the planning scene together with the resulting trajectory and the workspace visualization of the RRT are stored to a Coin3D's SoSeparator which e.g. can be displayed with the SoQtExaminerViewer. Have a look at the provided examples for details.
+\begin{lstlisting}
+SoSeparator *sep = new SoSeparator();
+VirtualRobot::SceneObject::VisualizationType colModel = SceneObject::Full;
+
+// display robot
+boost::shared_ptr<VirtualRobot::CoinVisualization> v 
+   = robot->getVisualization<VirtualRobot::CoinVisualization>(VirtualRobot::SceneObject::Full);
+sep->addChild(visualization->getCoinVisualization());
+
+// display obstacle
+VirtualRobot::VisualizationNodePtr vObstacle = obstacle->getVisualization();
+std::vector<VirtualRobot::VisualizationNodePtr> visus;
+visus.push_back(vObstacle);
+boost::shared_ptr<VirtualRobot::CoinVisualization> visualizationO(new VirtualRobot::CoinVisualization(visus));
+sep->addChild(visualizationO->getCoinVisualization());
+
+// RRT workspace visualization
+boost::shared_ptr<Saba::CoinRrtWorkspaceVisualization> w(new Saba::CoinRrtWorkspaceVisualization(robot, cspace, "Left Hand TCP"));
+w->addTree(tree);
+w->addTree(tree2);
+w->addCSpacePath(solution);
+w->addConfiguration(start,Saba::CoinRrtWorkspaceVisualization::eGreen,3.0f);
+w->addConfiguration(goal,Saba::CoinRrtWorkspaceVisualization::eGreen,3.0f);
+sep->addChild(w->getCoinVisualization());
+\end{lstlisting}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{PlanningBiRrt2}
+\end{figure}
+
+\section{IK-RRT}
+\subsection{Planning Scene}
+In the following example, the robot and the obstacles are accessed via a Scene object. The scene is defined similar to this exemplary file: 
+\begin{lstlisting}
+<Scene name="PlanningScene">
+
+    <Robot name="iCub" initConfig="init">
+        <File>/robots/iCub/iCub.xml</File>
+        <Configuration name="init">
+            <Node name="Left Arm Shoulder2" unit="radian" value="0.6"/>
+            <Node name="Left Arm Elbow1" unit="radian" value="1.8"/>
+            <Node name="Left Arm Elbow2" unit="radian" value="-0.5"/>
+            <Node name="Left Hand Thumb Joint1" unit="radian" value="0.8"/>
+            <Node name="Left Hand Thumb Joint2" unit="radian" value="-0.2"/>
+            <Node name="Right Arm Shoulder2" unit="radian" value="0.6"/>
+            <Node name="Right Arm Elbow1" unit="radian" value="1.8"/>
+            <Node name="Right Arm Elbow2" unit="radian" value="-0.5"/>
+            <Node name="Right Hand Thumb Joint1" unit="radian" value="0.8"/>
+            <Node name="Right Hand Thumb Joint2" unit="radian" value="-0.2"/>
+        </Configuration>
+
+        <RobotNodeSet name="Planning" kinematicRoot="iCubRoot" tcp="Left Arm TCP">
+            <Node name="Torso1"/>
+            <Node name="Torso2"/>
+            <Node name="Torso3"/>
+            <Node name="Left Arm Shoulder1"/>
+            <Node name="Left Arm Shoulder2"/>
+            <Node name="Left Arm Shoulder3"/>
+            <Node name="Left Arm Elbow1"/>
+            <Node name="Left Arm Elbow2"/>
+            <Node name="Left Arm Wrist1"/>
+            <Node name="Left Arm Wrist2"/>
+        </RobotNodeSet>
+
+        <RobotNodeSet name="ColModel Robot Moving">
+            <Node name="Left Arm Shoulder3"/>
+            <Node name="Left Arm Elbow2"/>
+            <Node name="Left Hand Palm"/>
+            <Node name="Left Hand Thumb Joint1"/>
+            <Node name="Left Hand Thumb Joint2"/>
+            <Node name="Left Hand Thumb Joint3"/>
+            <Node name="Left Hand Thumb Joint4"/>
+            <Node name="Left Hand Index Joint1"/>
+            <Node name="Left Hand Index Joint2"/>
+            <Node name="Left Hand Index Joint3"/>
+            <Node name="Left Hand Index Joint4"/>
+            <Node name="Left Hand Middle Joint1"/>
+            <Node name="Left Hand Middle Joint2"/>
+            <Node name="Left Hand Middle Joint3"/>
+            <Node name="Left Hand Middle Joint4"/>
+            <Node name="Left Hand Ring Joint1"/>
+            <Node name="Left Hand Ring Joint2"/>
+            <Node name="Left Hand Ring Joint3"/>
+            <Node name="Left Hand Ring Joint4"/>
+            <Node name="Left Hand Pinky Joint1"/>
+            <Node name="Left Hand Pinky Joint2"/>
+            <Node name="Left Hand Pinky Joint3"/>
+            <Node name="Left Hand Pinky Joint4"/>
+        </RobotNodeSet>
+
+        <RobotNodeSet name="ColModel Robot Static">
+            <Node name="LowerBody"/>
+            <Node name="Neck3"/>
+            <Node name="Left Leg Waist3"/>
+            <Node name="Left Leg Knee"/>
+            <Node name="Right Leg Waist3"/>
+            <Node name="Right Leg Knee"/>
+        </RobotNodeSet>
+    </Robot>
+
+    <ManipulationObject name="RiceBox">
+        <File type="Inventor">objects/riceBox_iCub_gr0.25.xml</File>
+        <GlobalPose>
+            <Transform>
+                <Translation x="-200" y="-200" z="650"/>
+                    <rollpitchyaw units="degree" roll="90" pitch="0" yaw="90"/>
+                </Transform>
+        </GlobalPose>
+    </ManipulationObject>
+
+    <SceneObjectSet name="Environment">
+        <SceneObject name="RiceBox"/>
+    </SceneObjectSet>
+
+</Scene>
+\end{lstlisting}
+The scene can be accessed as follows: 
+\begin{lstlisting}
+// load scene
+VirtualRobot::ScenePtr scene = VirtualRobot::SceneIO::loadScene("PlanningScene.xml");
+
+// get robot
+VirtualRobot::RobotPtr robot = scene->getRobot("iCub");
+
+// get environment
+VirtualRobot::SceneObjectSetPtr environment = scene->getSceneObjectSet("Environment");
+
+// get target object which should be grasped
+VirtualRobot::ManipulationObjectPtr object = scene->getManipulationObject("RiceBox");
+
+// get the end effector
+VirtualRobot::EndEffectorPtr eef = robot->getEndEffector("Left Hand");
+
+// get grasps
+VirtualRobot::GraspSetPtr graspSet = object->getGraspSet(eef);
+\end{lstlisting}
+\subsection{Collision Detection}
+Similar to the example above, collision detection should be performed between the RNS of the left arm (with hand) and the static part of the robot. Additionally collisions with the environment should be considered, whereas the environment may consist of several obstacles. 
+\begin{lstlisting}
+// setup collision detection
+VirtualRobot::CDManagerPtr cdm(new VirtualRobot::CDManager());
+VirtualRobot::SceneObjectSetPtr robotArm = robot->getSceneObjectSet("ColModel Robot Moving");
+VirtualRobot::SceneObjectSetPtr robotStatic = robot->getSceneObjectSet("ColModel Robot Static");
+
+cdm->addCollisionModel(robotArm);
+cdm->addCollisionModel(robotStatic);
+cdm->addCollisionModel(environment);
+\end{lstlisting}
+\subsection{Configuration Space}
+Again, the CSpaceSampled is used.  
+\begin{lstlisting}
+VirtualRobot::RobotNodeSetPtr dof = robot->getRobotNodeSet("Planning");
+Saba::CSpaceSampledPtr cspace.reset(new CSpaceSampled(robot, cdm, dof);
+
+// set sampling parameter (used for extending a C-Space tree,e.g. with RRT-EXTEND)
+cspace->setSamplingSize(sampling_extend_stepsize);
+
+// set sampling size for discrete collision detection (used for path sampling)
+cspace->setSamplingSizeDCD(sampling_extend_stepsize);
+\end{lstlisting}
+\subsection{IK-Solver}
+The IK-RRT approach needs an IK-solver in order to sample potential target configurations. In this example the GenerikIK solver is used.   
+\begin{lstlisting}
+VirtualRobot::GenericIKSolverPtr ikSolver(new VirtualRobot::GenericIKSolver(dof));
+
+// optional: use reachability information for quick reachability filtering
+ikSolver->setReachabilityCheck(reachSpace);
+
+// setup collision detection for IK solver
+ikSolver->collisionDetection(cdm);
+
+// set maximum translational (mm) and rotational (radian) error 
+ikSolver->setMaximumError(10.0f,0.1f);
+
+// set gain factor and number of loops 
+ikSolver->setupJacobian(0.9f,20);
+\end{lstlisting}
+\subsection{Planner}
+The IK-RRT planner relies on a C-Space, an IK-solver and a start configuration. The goal configuration is not explicitly needed, since it is queried during the planning process.  
+\begin{lstlisting}
+// get start configuration
+Eigen::VectorXf start
+dof->getJointValues(start);
+
+// setup planner
+Saba::GraspIkRrtPtr ikRrt(new Saba::GraspIkRrt(cspace, object, ikSolver, graspSet));
+ikRrt->setStart(start);
+
+// start planning
+ikRrt->plan();
+\end{lstlisting}
+\subsection{Post Processing}
+Since sampling-based approaches are known to produces non-optimal solutions, the results need to be post-processed in order to achieve appealing trajectories. this can be dine with the ShortcutProcessor as shown in the following example.   
+\begin{lstlisting}
+Saba::CSpacePathPtr solution = ikRrt->getSolution();
+Saba::ShortcutProcessorPtr postProcessing(new Saba::ShortcutProcessor(solution, cspace));
+Saba::CSpacePathPtr solutionSmoothed = postProcessing->optimize(100);
+\end{lstlisting}
+\section{GraspRrt Planner}
+The GraspRRT planner can be used to plan grasping motions without specifying any grasps in advance. The planner combines the search for feasible grasping configurations with the search for collision free motions. 
+\begin{lstlisting}
+// setup collision detection
+CDManagerPtr cdm(new CDManager());
+cdm->addCollisionModel(colModelRobA);   // arm and hand
+cdm->addCollisionModel(colModelRobB);   // other arm, other hand and torso
+cdm->addCollisionModel(colModelEnv);    // environment
+cdm->addCollisionModel(targetObject);   // target object
+
+// setup grasp quality measurement
+GraspQualityMeasureWrenchSpacePtr graspQuality.reset(new GraspQualityMeasureWrenchSpace(targetObject));
+
+// setup cspace and planner
+CSpaceSampledPtr cspace(new CSpaceSampled(robot,cdm,rns));
+GraspRrtPtr graspRrt(new GraspRrt(cspace,eef,targetObject,graspQuality,colModelEnv));
+
+// plan motion (implictly creates a reachable grasp)
+bool planOK = graspRrt->plan();
+
+// create smooth result
+solution = graspRrt>getSolution();
+ShortcutProcessorPtr postProcessing(new ShortcutProcessor(solution,cspace));
+solutionOptimized = postProcessing->optimize(100);
+
+// get planned grasps
+std::vector<GraspRrt::GraspInfo, Eigen::aligned_allocator<GraspRrt::GraspInfo> > vStoreGraspInfo;
+graspRrt->getGraspInfoResult(vStoreGraspInfo);
+\end{lstlisting}
+ \begin{figure}[H]
+ 	\centering
+ 	\begin{minipage} {.45\linewidth}
+ 	  \includegraphics[width=\linewidth]{GraspRRT1}
+ 	\end{minipage}
+ 	%\hspace{.05\linewidth}
+ 	\begin{minipage} {.45\linewidth}
+ 	  \includegraphics[width=\linewidth]{GraspRRT2}
+ 	\end{minipage}
+ \end{figure}
 \chapter{Inside the Grasp Studio}
 GraspStudio offers possibilities to compute the grasp quality for generic end-effector definitions, e.g. a humanoid hand. The implemented 6D wrench-space computations can be used to easily (and quickly) determine the quality of an applied grasp to an object. Furthermore, the implemented planners are able to generate grasp maps for given objects automatically. \par GraspStudio is a library that closely incorporates with VirtualRobot and which can be used for efficient grasp planning. Based on a robot defined in VirtualRobot, any end effector can be decoupled from the model and considered for grasp planning. \par The Grasp Center Point (GCP) of an end effector defines the favorite grasping position and an approach direction. A grasp planner interface is provided, which is used for the implementation of a generic grasp planner. This generic grasp planner mainly relies on two exchangeable functionalities: A generator for building grasping hypothesis and a grasp evaluation component.
 
@@ -1795,5 +2123,44 @@ catch (VirtualRobotException &e)
     cout << e.what();
 }
 \end{lstlisting}
-\includegraphics[width=\textwidth]{Grasp1}
+\begin{figure}[H]
+	\centering
+	\includegraphics[scale = 0.3]{Grasp1}
+\end{figure}
+\chapter{Examples}
+Simox comes with several ready to use examples that can be used as templates for developing custom applications. Please have a look at the examples folder in the directories VirtualRobot, MotionPlanning and GraspPlanning. Most examples rely on the Coin3D/Qt libraries for visualization, but you will find at least the RobotViewerOSG example showing how to incorporate the OpenSceneGraph library. 
+
+\subsection*{RobotViewer}
+
+This executable can be used to visualize and test your robot definition. A robot's XML file can be loaded and RobtoNodeSets, RobotNodes and EndEffectors can be accessed.
+\subsection*{RobotViewerOSG}
+
+This RobotViewer relies on OpenSceneGraph (OSG) dependencies instead of Coin3D.
+\subsection*{Jacobi}
+
+This example shows how Jacobians and their Pseudoinverse can be used for Differential-IK queries. Several advanced features are shown, such as bimanual IK or selective use of Cartesian targets (e.g. only the Z component is set, while ignoring the remaining coordinates).
+\subsection*{SceneViewer}
+
+This example shows how scenes with multiple robots and objects can be accessed.
+\subsection*{Reachability}
+
+Reachability data can be created and visualized with this example.
+\subsection*{GraspEditor}
+
+This editor can be used to create, load or manually modify grasping data that is stored with ManipulationObject files.
+\subsection*{RrtGui (Saba)}
+
+This example shows how the motion planning library Saba can be used to plan collision-free motions. Several RRT variants can be selected together with its parameter setup. Further, path post processing functionality is shown to smooth the resulting motions.
+\subsection*{IKRRT (Saba)}
+
+This demo shows how the IKRRT can be used to search for IK-solutions while planning collision-free motions.
+\subsection*{GraspRrt (Saba)}
+
+The GraspRrt algorithm can be used to simultaneously plan a collision-free motion together with a suitable grasp. For this planner no pre-defined grasps have to be present since the algorithm autonomously generates grasping hypotheses.
+\subsection*{GraspPlanning (GraspStudio)}
+
+This example shows how sets of grasps can be planned by the generic grasp planning component. The grasps are evaluated with the grasp wrench space approach.
+\subsection*{GraspQuality (GraspStudio)}
+
+Quality measurements can be used to evaluate the quality of a given grasp / IK-solution. 
 \end{document}
