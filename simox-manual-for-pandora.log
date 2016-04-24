@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.20)  22 APR 2016 13:28
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.20)  24 APR 2016 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -414,7 +414,20 @@ Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \enit@inbox=\box32
 \enitdp@description=\count131
 )
-(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+(/usr/share/texlive/texmf-dist/tex/latex/subfloat/subfloat.sty
+Package: subfloat 2003/08/21 version 2.14
+
+Package `subfloat', Version 2.14 of 2003/08/21.
+
+Package subfloat Warning: Numbers of floats not counted:
+(subfloat)                If you use one of the counters subfloatfiguremax or
+(subfloat)                subfloattablemax you will get strange error messages
+(subfloat)                containing \c@subfloatfiguremax or
+(subfloat)                \c@subfloattablemax:
+(subfloat)                Please switch on countmax or remove the code using
+(subfloat)                the counter then..
+
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
@@ -440,20 +453,20 @@ Package: amsthm 2004/08/06 v2.20
 (./simox-manual-for-pandora.aux)
 \openout1 = `simox-manual-for-pandora.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 89.
-LaTeX Font Info:    ... okay on input line 89.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 92.
+LaTeX Font Info:    ... okay on input line 92.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
@@ -475,7 +488,7 @@ Package caption Info: End \AtBeginDocument code.
 )
 \c@lstlisting=\count139
 \AtBeginShipoutBox=\box34
-Package hyperref Info: Link coloring OFF on input line 89.
+Package hyperref Info: Link coloring OFF on input line 92.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -484,35 +497,35 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count140
 )
-LaTeX Info: Redefining \ref on input line 89.
-LaTeX Info: Redefining \pageref on input line 89.
-LaTeX Info: Redefining \nameref on input line 89.
+LaTeX Info: Redefining \ref on input line 92.
+LaTeX Info: Redefining \pageref on input line 92.
+LaTeX Info: Redefining \nameref on input line 92.
 
 (./simox-manual-for-pandora.out) (./simox-manual-for-pandora.out)
 \@outlinefile=\write3
 \openout3 = `simox-manual-for-pandora.out'.
 
-LaTeX Font Info:    Try loading font information for U+msa on input line 92.
+LaTeX Font Info:    Try loading font information for U+msa on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 92.
+LaTeX Font Info:    Try loading font information for U+msb on input line 95.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Underfull \hbox (badness 6094) in paragraph at lines 92--92
+Underfull \hbox (badness 6094) in paragraph at lines 95--95
 \OT1/cmr/bx/n/24.88 Grasp Plan-ner Li-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 \OT1/cmr/bx/n/24.88 L[]T[]X Pan-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 92--92
+Underfull \hbox (badness 10000) in paragraph at lines 95--95
 
  []
 
@@ -529,62 +542,68 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--92
 
 ]
 Chapter 1.
-[5] [6] [7] [8
+[5]
+Overfull \hbox (6.44508pt too wide) in paragraph at lines 108--108
+\OT1/cmr/m/n/10 which was de-signed for ef-fi-cient plan-ning in high-dimension
+al con-fig-u-ra-tion spaces. 
+ []
 
-]
+[6]
 Chapter 2.
 
-LaTeX Warning: Hyper reference `simox gitlab' on page 9 undefined on input line
- 186.
+LaTeX Warning: Hyper reference `simox gitlab' on page 7 undefined on input line
+ 133.
 
 
-Overfull \hbox (60.02742pt too wide) in paragraph at lines 185--187
+Overfull \hbox (60.02742pt too wide) in paragraph at lines 132--134
 \OT1/cmr/m/n/10 Or use a GUI-based GIT client to grab the sources from: 'https:
 //gitlab.com/Simox/simox.git' 
  []
 
 
-LaTeX Warning: Hyper reference `cmake' on page 9 undefined on input line 191.
+LaTeX Warning: Hyper reference `cmake' on page 7 undefined on input line 138.
 
 
-Overfull \hbox (37.22185pt too wide) in paragraph at lines 191--192
+Overfull \hbox (37.22185pt too wide) in paragraph at lines 138--139
 []\OT1/cmr/m/n/10 CMake $\OML/cmm/m/it/10 >$\OT1/cmr/m/n/10 =2.8.3: A cross-pla
 tform, open-source build sys-tem.http://www.cmake.org/ 
  []
 
 
-LaTeX Warning: Hyper reference `boost' on page 9 undefined on input line 192.
+LaTeX Warning: Hyper reference `boost' on page 7 undefined on input line 139.
 
 
-Overfull \hbox (83.52855pt too wide) in paragraph at lines 192--193
+Overfull \hbox (83.52855pt too wide) in paragraph at lines 139--140
 []\OT1/cmr/m/n/10 Boost $\OML/cmm/m/it/10 >$\OT1/cmr/m/n/10 =1.42: Pro-vides fr
 ee peer-reviewed portable C++ source li-braries.http://www.boost.org 
  []
 
 
-LaTeX Warning: Hyper reference `Eigen' on page 9 undefined on input line 193.
+LaTeX Warning: Hyper reference `Eigen' on page 7 undefined on input line 140.
 
+[7
+
+]
 \c@MyCounter=\count141
-[9]
-
-LaTeX Warning: Hyper reference `qt' on page 10 undefined on input line 202.
 
 
-LaTeX Warning: Hyper reference `coin3d' on page 10 undefined on input line 203.
+LaTeX Warning: Hyper reference `qt' on page 8 undefined on input line 149.
 
 
-
-LaTeX Warning: Hyper reference `SoQt' on page 10 undefined on input line 205.
-
-
-LaTeX Warning: Hyper reference `qt' on page 10 undefined on input line 210.
+LaTeX Warning: Hyper reference `coin3d' on page 8 undefined on input line 150.
 
 
-LaTeX Warning: Hyper reference `openscene' on page 10 undefined on input line 2
-11.
+LaTeX Warning: Hyper reference `SoQt' on page 8 undefined on input line 152.
 
-[10]
-Overfull \hbox (5.02737pt too wide) in paragraph at lines 233--234
+
+LaTeX Warning: Hyper reference `qt' on page 8 undefined on input line 157.
+
+
+LaTeX Warning: Hyper reference `openscene' on page 8 undefined on input line 15
+8.
+
+[8]
+Overfull \hbox (5.02737pt too wide) in paragraph at lines 180--181
 []\OT1/cmtt/m/n/10 SoQt[]DIR -> the SoQt lib (Has to be compiled with the used
  []
 
@@ -594,116 +613,541 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2013/08/26 1.5b listings language file
 )
-Overfull \hbox (14.05728pt too wide) in paragraph at lines 234--234
+Overfull \hbox (14.05728pt too wide) in paragraph at lines 181--181
 []\OT1/cmtt/m/n/10 QT[]QMAKE[]EXECUTABLE -> The complete path to the qmake bina
 ry
  []
 
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <10> not available
-(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 238.
+(Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 185.
 
-Overfull \hbox (16.99728pt too wide) in paragraph at lines 238--239
+Overfull \hbox (16.99728pt too wide) in paragraph at lines 185--186
 [] \OT1/cmtt/m/n/10 An exemplary setup could look like this (). You can create
  []
 
 
-Overfull \hbox (24.55719pt too wide) in paragraph at lines 238--239
+Overfull \hbox (24.55719pt too wide) in paragraph at lines 185--186
 \OT1/cmtt/m/n/10 a simox[]setpath.sh file and by calling source simox[]setpath.
 sh
  []
 
 
-Overfull \hbox (11.47833pt too wide) in paragraph at lines 252--253
+Overfull \hbox (11.47833pt too wide) in paragraph at lines 199--200
 \OT1/cmr/m/n/10 http://www.eclipse.org or QtCre-ator http://qt-project.org/doc/
 qt-
  []
 
-[11] [12]
-Overfull \hbox (6.44508pt too wide) in paragraph at lines 288--288
-\OT1/cmr/m/n/10 which was de-signed for ef-fi-cient plan-ning in high-dimension
-al con-fig-u-ra-tion spaces. 
+
+Overfull \hbox (98.30644pt too wide) in paragraph at lines 207--208
+\OT1/cmr/m/n/10 pro-vides a free ver-sion, the Vi-sual Stu-dio Ex-press Edi-tio
+n: http://www.microsoft.com/visualstudio/en-
  []
 
-[13] [14]
-Overfull \hbox (9.08405pt too wide) in paragraph at lines 311--312
+[9]
+Overfull \hbox (141.8342pt too wide) in paragraph at lines 212--213
+[]\OT1/cmr/m/n/10 CMake can be in-stalled with the pro-vided in-staller: http:/
+/www.cmake.org/cmake/resources/software.html 
+ []
+
+
+Overfull \hbox (98.25085pt too wide) in paragraph at lines 213--214
+[]\OT1/cmr/m/n/10 Boost bi-na-ries for win-dows can be found here: http://sourc
+eforge.net/projects/boost/files/boost-
+ []
+
+
+Overfull \hbox (26.72299pt too wide) in paragraph at lines 214--215
+[]\OT1/cmr/m/n/10 Eigen is a header-only li-brary that can be found here: http:
+//eigen.tuxfamily.org.
+ []
+
+
+Overfull \hbox (17.33293pt too wide) in paragraph at lines 215--216
+[]\OT1/cmr/m/n/10 Qt can be in-stalled via the Qt SDK in-staller: http://qt-pro
+ject.org/downloads.
+ []
+
+
+Overfull \hbox (93.95267pt too wide) in paragraph at lines 215--216
+\OT1/cmr/m/n/10 hand. Use the lat-est src pack-ege from here https://download.q
+t.io/official[]releases/qt/4.8/4.8.7/ 
+ []
+
+
+Overfull \hbox (28.55525pt too wide) in paragraph at lines 216--217
+[]\OT1/cmr/m/n/10 Coin3D: Coin3D can be found at https://bitbucket.org/Coin3D/c
+oin/wiki/Home
+ []
+
+
+Overfull \hbox (16.50629pt too wide) in paragraph at lines 219--220
+\OT1/cmr/m/n/10 If you run into trou-bles com-pil-ing Coin3D/SoQt have a look h
+ere: Coin3D[]Win[]Help 
+ []
+
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 230.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 230.
+ [10]
+<fig/Simox_cmake_gui.png, id=199, 1041.8925pt x 623.32875pt>
+File: fig/Simox_cmake_gui.png Graphic file (type png)
+
+<use fig/Simox_cmake_gui.png>
+Package pdftex.def Info: fig/Simox_cmake_gui.png used on input line 247.
+(pdftex.def)             Requested size: 345.0pt x 206.40295pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 247--248
+[][] 
+ []
+
+
+Underfull \vbox (badness 6016) has occurred while \output is active []
+
+ [11]
+[12 <./fig/Simox_cmake_gui.png (PNG copy)>]
+Chapter 3.
+[13
+
+]
+Overfull \hbox (9.08405pt too wide) in paragraph at lines 283--284
 \OT1/cmr/m/n/10 Robot's RobotViewer ex-am-ple (lo-cated at Vir-tu-al-Robot/ex-a
 m-ples/RobotViewer). 
  []
 
-[15] [16] [17] [18] [19]
+<fig/Tutorial1.png, id=224, 1020.81375pt x 804.00375pt>
+File: fig/Tutorial1.png Graphic file (type png)
+
+<use fig/Tutorial1.png>
+Package pdftex.def Info: fig/Tutorial1.png used on input line 293.
+(pdftex.def)             Requested size: 345.0pt x 271.726pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [14]
+[15 <./fig/Tutorial1.png (PNG copy)>]
+<fig/Tutorial2.png, id=252, 1020.81375pt x 804.00375pt>
+File: fig/Tutorial2.png Graphic file (type png)
+
+<use fig/Tutorial2.png>
+Package pdftex.def Info: fig/Tutorial2.png used on input line 325.
+(pdftex.def)             Requested size: 345.0pt x 271.726pt.
+ [16 <./fig/Tutorial2.png (PNG copy)>]
+<fig/Tutorial3a.png, id=271, 1020.81375pt x 804.00375pt>
+File: fig/Tutorial3a.png Graphic file (type png)
+
+<use fig/Tutorial3a.png>
+Package pdftex.def Info: fig/Tutorial3a.png used on input line 360.
+(pdftex.def)             Requested size: 155.24895pt x 122.27608pt.
+
+<fig/Tutorial3b.png, id=272, 1020.81375pt x 804.00375pt>
+File: fig/Tutorial3b.png Graphic file (type png)
+
+<use fig/Tutorial3b.png>
+Package pdftex.def Info: fig/Tutorial3b.png used on input line 364.
+(pdftex.def)             Requested size: 155.24895pt x 122.27608pt.
+ [17 <./fig/Tutorial3a.png (PNG copy)> <./fig/Tutorial3b.png (PNG copy)>] [18]
+<fig/Tutorial4a.png, id=355, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial4a.png Graphic file (type png)
+
+<use fig/Tutorial4a.png>
+Package pdftex.def Info: fig/Tutorial4a.png used on input line 435.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+<fig/Tutorial4b.png, id=356, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial4b.png Graphic file (type png)
+
+<use fig/Tutorial4b.png>
+Package pdftex.def Info: fig/Tutorial4b.png used on input line 439.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+ [19 <./fig/Tutorial4a.png (PNG copy)> <./fig/Tutorial4b.png (PNG copy)>] <fig/
+Tutorial5a.png, id=390, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial5a.png Graphic file (type png)
+
+<use fig/Tutorial5a.png>
+Package pdftex.def Info: fig/Tutorial5a.png used on input line 494.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+<fig/Tutorial5b.png, id=391, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial5b.png Graphic file (type png)
+
+<use fig/Tutorial5b.png>
+Package pdftex.def Info: fig/Tutorial5b.png used on input line 498.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+ [20 <./fig/Tutorial5a.png (PNG copy)> <./fig/Tutorial5b.png (PNG copy)>] [21] 
+[22]
+<fig/Tutorial6a.png, id=500, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial6a.png Graphic file (type png)
+
+<use fig/Tutorial6a.png>
+Package pdftex.def Info: fig/Tutorial6a.png used on input line 597.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+<fig/Tutorial6b.png, id=501, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial6b.png Graphic file (type png)
+
+<use fig/Tutorial6b.png>
+Package pdftex.def Info: fig/Tutorial6b.png used on input line 601.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+ [23 <./fig/Tutorial6a.png (PNG copy)> <./fig/Tutorial6b.png (PNG copy)>] <fig/
+Tutorial7.png, id=529, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial7.png Graphic file (type png)
+
+<use fig/Tutorial7.png>
+Package pdftex.def Info: fig/Tutorial7.png used on input line 666.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+<fig/Tutorial7b.png, id=530, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial7b.png Graphic file (type png)
+
+<use fig/Tutorial7b.png>
+Package pdftex.def Info: fig/Tutorial7b.png used on input line 670.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
-[22] [23] [24]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 729.
+ [24]
+[25 <./fig/Tutorial7.png (PNG copy)> <./fig/Tutorial7b.png (PNG copy)>]
+[26] <fig/Tutorial8.png, id=646, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial8.png Graphic file (type png)
 
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
-)
+<use fig/Tutorial8.png>
+Package pdftex.def Info: fig/Tutorial8.png used on input line 760.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+<fig/Tutorial8b.png, id=647, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial8b.png Graphic file (type png)
+
+<use fig/Tutorial8b.png>
+Package pdftex.def Info: fig/Tutorial8b.png used on input line 764.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 729.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 771.
 
-Overfull \hbox (6.86162pt too wide) in paragraph at lines 734--735
+Overfull \hbox (6.86162pt too wide) in paragraph at lines 776--777
 \OT1/cmr/m/n/10 are not con-sid-ered, but col-li-sions be-tween other ac-tors a
 nd the RobotN-
  []
 
-[25]
-Underfull \vbox (badness 1215) has occurred while \output is active []
+[27 <./fig/Tutorial8.png (PNG copy)> <./fig/Tutorial8b.png (PNG copy)>]
+[28]
+File: fig/Tutorial3a.png Graphic file (type png)
+ <use fig/Tutorial3a.png>
+Package pdftex.def Info: fig/Tutorial3a.png used on input line 828.
+(pdftex.def)             Requested size: 155.24895pt x 122.27608pt.
 
- [26]
-Overfull \hbox (47.08401pt too wide) in paragraph at lines 805--806
+<fig/Tutorial9b.png, id=692, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial9b.png Graphic file (type png)
+
+<use fig/Tutorial9b.png>
+Package pdftex.def Info: fig/Tutorial9b.png used on input line 832.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+<fig/Tutorial9c.png, id=693, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial9c.png Graphic file (type png)
+
+<use fig/Tutorial9c.png>
+Package pdftex.def Info: fig/Tutorial9c.png used on input line 838.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29 <./fig/Tutorial9b.png (PNG copy)> <./fig/Tutorial9c.png (PNG copy)>]
+Overfull \hbox (47.08401pt too wide) in paragraph at lines 864--865
 \OT1/cmr/m/n/10 names are searched in the paths, de-fined in Vir-tu-al-Robot::R
 untimeEnvironment.
  []
 
-[27] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37]
+[30] [31] <fig/Tutorial10.png, id=767, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial10.png Graphic file (type png)
+
+<use fig/Tutorial10.png>
+Package pdftex.def Info: fig/Tutorial10.png used on input line 921.
+(pdftex.def)             Requested size: 345.0pt x 268.75032pt.
+
+Overfull \hbox (15.0pt too wide) in paragraph at lines 921--922
+[][] 
+ []
+
+[32 <./fig/Tutorial10.png (PNG copy)>]
+Overfull \hbox (71.4065pt too wide) in paragraph at lines 934--935
+\OT1/cmr/m/n/10 as Vir-tu-al-Robot::RobotPtr (in-stead of the long ver-sion boo
+st::shared[]ptr<VirtualRobot::Robot>).
+ []
+
+[33] [34] [35] <fig/Tutorial9.png, id=856, 1099.10625pt x 856.19875pt>
+File: fig/Tutorial9.png Graphic file (type png)
+
+<use fig/Tutorial9.png>
+Package pdftex.def Info: fig/Tutorial9.png used on input line 1061.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+File: fig/Tutorial9c.png Graphic file (type png)
+ <use fig/Tutorial9c.png>
+Package pdftex.def Info: fig/Tutorial9c.png used on input line 1065.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+
+<fig/ContactPointsBox.png, id=857, 977.6525pt x 855.195pt>
+File: fig/ContactPointsBox.png Graphic file (type png)
+
+<use fig/ContactPointsBox.png>
+Package pdftex.def Info: fig/ContactPointsBox.png used on input line 1071.
+(pdftex.def)             Requested size: 155.24895pt x 135.8031pt.
+ [36 <./fig/Tutorial9.png (PNG copy)>] [37 <./fig/ContactPointsBox.png>]
+<fig/Wok_grasps_EEF.png, id=898, 1092.08pt x 814.04124pt>
+File: fig/Wok_grasps_EEF.png Graphic file (type png)
+
+<use fig/Wok_grasps_EEF.png>
+Package pdftex.def Info: fig/Wok_grasps_EEF.png used on input line 1127.
+(pdftex.def)             Requested size: 155.24895pt x 115.71638pt.
+File: fig/Tutorial10.png Graphic file (type png)
+ <use fig/Tutorial10.png>
+Package pdftex.def Info: fig/Tutorial10.png used on input line 1131.
+(pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
+ [38 <./fig/Wok_grasps_EEF.png>]
+Overfull \hbox (7.54689pt too wide) in paragraph at lines 1141--1142
+[]\OT1/cmr/m/n/10 The fol-low-ing vari-ables are needed to setup your en-vi-ron
+-ment. The Coin3D's
+ []
+
+[39] [40]
+Overfull \hbox (71.6675pt too wide) in paragraph at lines 1223--1224
+\OT1/cmr/m/n/10 lated data struc-ture by pass-ing teh cor-re-spond-ing Vir-tu-a
+l-Robot::SceneObject::VisualizationType
+ []
+
+[41] [42] [43] [44] [45]
+<fig/Reachability_HipRightArm_ArmarIII.png, id=1078, 1193.45876pt x 895.345pt>
+File: fig/Reachability_HipRightArm_ArmarIII.png Graphic file (type png)
+
+<use fig/Reachability_HipRightArm_ArmarIII.png>
+Package pdftex.def Info: fig/Reachability_HipRightArm_ArmarIII.png used on inpu
+t line 1365.
+(pdftex.def)             Requested size: 155.24895pt x 116.46724pt.
+
+<fig/Reachmap.png, id=1079, 1126.2075pt x 952.55875pt>
+File: fig/Reachmap.png Graphic file (type png)
+ <use fig/Reachmap.png>
+Package pdftex.def Info: fig/Reachmap.png used on input line 1369.
+(pdftex.def)             Requested size: 155.24895pt x 131.30789pt.
+
+<fig/ReachMapAll.png, id=1080, 1162.3425pt x 776.9025pt>
+File: fig/ReachMapAll.png Graphic file (type png)
+
+<use fig/ReachMapAll.png>
+Package pdftex.def Info: fig/ReachMapAll.png used on input line 1375.
+(pdftex.def)             Requested size: 155.24895pt x 103.76297pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [38]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1181.
+ [46]
+[47 <./fig/Reachability_HipRightArm_ArmarIII.png> <./fig/Reachmap.png> <./fig/R
+eachMapAll.png (PNG copy)>] <fig/IKDemo.png, id=1133, 782.925pt x 766.865pt>
+File: fig/IKDemo.png Graphic file (type png)
 
-[39]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1181.
+<use fig/IKDemo.png>
+Package pdftex.def Info: fig/IKDemo.png used on input line 1430.
+(pdftex.def)             Requested size: 345.0pt x 337.9248pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+[49 <./fig/IKDemo.png>]
+<fig/HierarchicalIK.png, id=1181, 504.88625pt x 574.145pt>
+File: fig/HierarchicalIK.png Graphic file (type png)
+
+<use fig/HierarchicalIK.png>
+Package pdftex.def Info: fig/HierarchicalIK.png used on input line 1470.
+(pdftex.def)             Requested size: 345.0pt x 392.33203pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [50]
+[51 <./fig/HierarchicalIK.png>]
+<fig/StabilityDemo.png, id=1225, 677.53125pt x 527.9725pt>
+File: fig/StabilityDemo.png Graphic file (type png)
+
+<use fig/StabilityDemo.png>
+Package pdftex.def Info: fig/StabilityDemo.png used on input line 1505.
+(pdftex.def)             Requested size: 345.0pt x 268.85155pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [52]
+[53 <./fig/StabilityDemo.png>]
+Overfull \hbox (1.13843pt too wide) in paragraph at lines 1520--1521
+[]\OT1/cmr/m/n/10 Unit-Time-Type: A string that could be "sec", "sec-ond", "min
+", "minute",
+ []
+
+[54] <fig/Xsd_Robot.png, id=1284, 600.2425pt x 265.99374pt>
+File: fig/Xsd_Robot.png Graphic file (type png)
+
+<use fig/Xsd_Robot.png>
+Package pdftex.def Info: fig/Xsd_Robot.png used on input line 1557.
+(pdftex.def)             Requested size: 345.0pt x 152.88838pt.
+
+<fig/Xsd_RobotNode2.png, id=1285, 745.78625pt x 1689.31125pt>
+File: fig/Xsd_RobotNode2.png Graphic file (type png)
+
+<use fig/Xsd_RobotNode2.png>
+Package pdftex.def Info: fig/Xsd_RobotNode2.png used on input line 1566.
+(pdftex.def)             Requested size: 345.0pt x 781.47467pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [55 <./fig/Xsd_Robot.png>]
+Overfull \vbox (231.47467pt too high) has occurred while \output is active []
+
+
+[56 <./fig/Xsd_RobotNode2.png>]
+<fig/Xsd_Joint2.png, id=1299, 745.78625pt x 1393.205pt>
+File: fig/Xsd_Joint2.png Graphic file (type png)
+
+<use fig/Xsd_Joint2.png>
+Package pdftex.def Info: fig/Xsd_Joint2.png used on input line 1575.
+(pdftex.def)             Requested size: 345.0pt x 644.49605pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+Overfull \vbox (94.49605pt too high) has occurred while \output is active []
+
+
+[58 <./fig/Xsd_Joint2.png>]
+<fig/Xsd_Physics.png, id=1309, 581.17125pt x 615.29875pt>
+File: fig/Xsd_Physics.png Graphic file (type png)
+
+<use fig/Xsd_Physics.png>
+Package pdftex.def Info: fig/Xsd_Physics.png used on input line 1579.
+(pdftex.def)             Requested size: 345.0pt x 365.26701pt.
+
+Overfull \hbox (207.4078pt too wide) in paragraph at lines 1578--1580
+\OT1/cmr/m/n/10 x,y,z at-tributes in the joint's co-or-di-nate sys-tem. [] 
+ []
+
+<fig/Visualization.png, id=1310, 729.72626pt x 929.4725pt>
+File: fig/Visualization.png Graphic file (type png)
+
+<use fig/Visualization.png>
+Package pdftex.def Info: fig/Visualization.png used on input line 1581.
+(pdftex.def)             Requested size: 345.0pt x 439.43338pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [59 <./fig/Xsd_Physics.png>] [60 <./fig/Visualization.png>]
+<fig/Xsd_CollisionModel.png, id=1326, 638.385pt x 481.8pt>
+File: fig/Xsd_CollisionModel.png Graphic file (type png)
+
+<use fig/Xsd_CollisionModel.png>
+Package pdftex.def Info: fig/Xsd_CollisionModel.png used on input line 1606.
+(pdftex.def)             Requested size: 345.0pt x 260.37396pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [61]
+<fig/Xsd_Sensor.png, id=1348, 856.19875pt x 582.175pt>
+File: fig/Xsd_Sensor.png Graphic file (type png)
+
+<use fig/Xsd_Sensor.png>
+Package pdftex.def Info: fig/Xsd_Sensor.png used on input line 1609.
+(pdftex.def)             Requested size: 345.0pt x 234.58034pt.
+
+Overfull \hbox (135.40767pt too wide) in paragraph at lines 1608--1610
+\OT1/cmr/m/n/10 mented: Po-si-tion and Cam-era. [] 
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62 <./fig/Xsd_CollisionModel.png>]
+<fig/Xsd_RobotNodeSet.png, id=1355, 529.98pt x 280.04625pt>
+File: fig/Xsd_RobotNodeSet.png Graphic file (type png)
+
+<use fig/Xsd_RobotNodeSet.png>
+Package pdftex.def Info: fig/Xsd_RobotNodeSet.png used on input line 1611.
+(pdftex.def)             Requested size: 345.0pt x 182.30138pt.
+ [63 <./fig/Xsd_Sensor.png> <./fig/Xsd_RobotNodeSet.png>] <fig/Xsd_EEF_open.png
+, id=1362, 723.70375pt x 911.405pt>
+File: fig/Xsd_EEF_open.png Graphic file (type png)
+
+<use fig/Xsd_EEF_open.png>
+Package pdftex.def Info: fig/Xsd_EEF_open.png used on input line 1620.
+(pdftex.def)             Requested size: 345.0pt x 434.47945pt.
+ [64 <./fig/Xsd_EEF_open.png>] [65] [66] [67]
+[68] <fig/GraspPlanner.png, id=1483, 991.705pt x 830.10126pt>
+File: fig/GraspPlanner.png Graphic file (type png)
+
+<use fig/GraspPlanner.png>
+Package pdftex.def Info: fig/GraspPlanner.png used on input line 1752.
+(pdftex.def)             Requested size: 345.0pt x 288.77917pt.
+ [69 <./fig/GraspPlanner.png>]
+<fig/GraspPlanner1.png, id=1496, 633.36626pt x 428.60126pt>
+File: fig/GraspPlanner1.png Graphic file (type png)
+
+<use fig/GraspPlanner1.png>
+Package pdftex.def Info: fig/GraspPlanner1.png used on input line 1778.
+(pdftex.def)             Requested size: 345.0pt x 233.4686pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [70]
+[71 <./fig/GraspPlanner1.png>]
+<fig/Grasp1.png, id=1542, 514.92375pt x 760.8425pt>
+File: fig/Grasp1.png Graphic file (type png)
+ <use fig/Grasp1.png>
+Package pdftex.def Info: fig/Grasp1.png used on input line 1799.
+(pdftex.def)             Requested size: 345.0pt x 509.77344pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1800.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [72]
+[73 <./fig/Grasp1.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1800.
  (./simox-manual-for-pandora.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1181.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1181.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1800.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1800.
 
-Package rerunfilecheck Info: File `simox-manual-for-pandora.out' has not change
-d.
-(rerunfilecheck)             Checksum: 8E9DDDBDE1A71F60B388A48A911901DD;1197.
 
+
+Package rerunfilecheck Warning: File `simox-manual-for-pandora.out' has changed
+.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `simox-manual-for-pandora.out':
+(rerunfilecheck)             Before: 640A161F5DA7E9C364FA351C7B4932F1;1710
+(rerunfilecheck)             After:  99592FE9DE2BFA159A86BD3D14A52F15;2007.
 
 LaTeX Warning: There were undefined references.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1181.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1800.
  ) 
 Here is how much of TeX's memory you used:
- 11345 strings out of 493304
- 167584 string characters out of 6139871
- 413170 words of memory out of 5000000
- 13916 multiletter control sequences out of 15000+600000
+ 12514 strings out of 493304
+ 186561 string characters out of 6139871
+ 405257 words of memory out of 5000000
+ 14614 multiletter control sequences out of 15000+600000
  18556 words of font info for 68 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 42i,8n,58p,1237b,1690s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmtt10.pfb>
-Output written on simox-manual-for-pandora.pdf (39 pages, 268991 bytes).
+ 42i,8n,58p,1237b,1867s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmtt10.pfb>
+Output written on simox-manual-for-pandora.pdf (73 pages, 5739327 bytes).
 PDF statistics:
- 1128 PDF objects out of 1200 (max. 8388607)
- 1065 compressed objects within 11 object streams
- 725 named destinations out of 1000 (max. 500000)
- 137 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1827 PDF objects out of 2073 (max. 8388607)
+ 1680 compressed objects within 17 object streams
+ 1151 named destinations out of 1200 (max. 500000)
+ 396 words of extra memory for PDF output out of 10000 (max. 10000000)
 
