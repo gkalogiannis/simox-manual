@@ -83,6 +83,19 @@ Simox comes under GNU Library General Public License,(version 2.1 or any later v
 \section{Robotic grasping}
 Over the past decades, research in robotic grasping has flourished. Several algorithms have been developed for synthesizing robotic grasps in order to achieve stability,force-closure,task compatibility and other properties. Different approaches have been developed to meet these goals, and substantial improvements have been claimed. Thus,the availability of a large number of algorithms
 for our purpose has made it difficult to choose, since their approaches and assumptions are different.
+\section{Some Definitions}
+\subsection*{End Effector - eef}
+In robotics, an end effector is the device at the end of a robotic arm, designed to interact with the environment. The exact nature of this device depends on the application of the robot.\par In the strict definition, which originates from serial robotic manipulators, the end effector means the last link (or end) of the robot. At this endpoint the tools are attached. In a wider sense, an end effector can be seen as the part of a robot that interacts with the work environment. This does not refer to the wheels of a mobile robot or the feet of a humanoid robot which are also not end effectors—they are part of the robot's mobility.
+\subsection*{Tool Center Point - TCP}
+Tool Center Point (TCP) is the location on the end effector or tool of a robot manipulator whose position and orientation define the coordinates of the controlled object.\par
+The tool center point is located either on the robot, or the tool. Typically the TCP is used when referring to the robots position, as well as the focal point of the tool. (e.g. the TCP could be at the tip of a welding torch) The TCP can be specified in cartesian, cylindrical, spherical, etc. coordinates depending on the robot. As tools are changed we will often reprogram the robot for the TCP.
+\subsection*{Robotic grasp synthesis algorithms}
+During a task execution,the grasping fingers must be controlled
+so that the grasp processes dexterity, equilibrium, stability and
+dynamic behavior. Such a control scheme, requires methods of
+computing the finger parameters(positions and forces of fingertips
+and joints). These algorithms are referred to as robotic grasp
+synthesis algorithms.
 \section{Need of grasping planning tools}
 \par
 Automatic grasp planning is a difficult problem because of the huge number of possible hand configurations. Humans simplify the problem by choosing an appropriate prehensile posture appropriate for the object and task to be performed. By modeling an object as a set of shape primitives (spheres, cylinders, cones and boxes) grasping tools can use a set of rules to generate a set of grasp starting positions and pregrasp shapes. These generated data can then be tested on the object model. Several grasp planning tools offer also the functionality to evaluate and test the resulted grasp in order to present the best grasp to the user.
