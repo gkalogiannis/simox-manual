@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.4.20)  25 APR 2016 09:33
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.3.16)  25 APR 2016 10:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -682,7 +682,7 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 225.
 
-<fig/Simox_cmake_gui.png, id=426, 1041.8925pt x 623.32875pt>
+<fig/Simox_cmake_gui.png, id=428, 1041.8925pt x 623.32875pt>
 File: fig/Simox_cmake_gui.png Graphic file (type png)
 
 <use fig/Simox_cmake_gui.png>
@@ -707,7 +707,7 @@ Overfull \hbox (9.08405pt too wide) in paragraph at lines 277--278
 m-ples/RobotViewer). 
  []
 
-<fig/Tutorial1.png, id=451, 1020.81375pt x 804.00375pt>
+<fig/Tutorial1.png, id=453, 1020.81375pt x 804.00375pt>
 File: fig/Tutorial1.png Graphic file (type png)
 
 <use fig/Tutorial1.png>
@@ -718,49 +718,49 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [14]
 [15 <./fig/Tutorial1.png (PNG copy)>]
-<fig/Tutorial2.png, id=477, 1020.81375pt x 804.00375pt>
+<fig/Tutorial2.png, id=479, 1020.81375pt x 804.00375pt>
 File: fig/Tutorial2.png Graphic file (type png)
 
 <use fig/Tutorial2.png>
 Package pdftex.def Info: fig/Tutorial2.png used on input line 319.
 (pdftex.def)             Requested size: 345.0pt x 271.726pt.
  [16 <./fig/Tutorial2.png (PNG copy)>]
-<fig/Tutorial3a.png, id=495, 1020.81375pt x 804.00375pt>
+<fig/Tutorial3a.png, id=497, 1020.81375pt x 804.00375pt>
 File: fig/Tutorial3a.png Graphic file (type png)
 
 <use fig/Tutorial3a.png>
 Package pdftex.def Info: fig/Tutorial3a.png used on input line 354.
 (pdftex.def)             Requested size: 155.24895pt x 122.27608pt.
 
-<fig/Tutorial3b.png, id=496, 1020.81375pt x 804.00375pt>
+<fig/Tutorial3b.png, id=498, 1020.81375pt x 804.00375pt>
 File: fig/Tutorial3b.png Graphic file (type png)
 
 <use fig/Tutorial3b.png>
 Package pdftex.def Info: fig/Tutorial3b.png used on input line 358.
 (pdftex.def)             Requested size: 155.24895pt x 122.27608pt.
  [17 <./fig/Tutorial3a.png (PNG copy)> <./fig/Tutorial3b.png (PNG copy)>] [18]
-<fig/Tutorial4a.png, id=579, 1099.10625pt x 856.19875pt>
+<fig/Tutorial4a.png, id=581, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial4a.png Graphic file (type png)
 
 <use fig/Tutorial4a.png>
 Package pdftex.def Info: fig/Tutorial4a.png used on input line 429.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 
-<fig/Tutorial4b.png, id=580, 1099.10625pt x 856.19875pt>
+<fig/Tutorial4b.png, id=582, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial4b.png Graphic file (type png)
 
 <use fig/Tutorial4b.png>
 Package pdftex.def Info: fig/Tutorial4b.png used on input line 433.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
  [19 <./fig/Tutorial4a.png (PNG copy)> <./fig/Tutorial4b.png (PNG copy)>] <fig/
-Tutorial5a.png, id=611, 1099.10625pt x 856.19875pt>
+Tutorial5a.png, id=613, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial5a.png Graphic file (type png)
 
 <use fig/Tutorial5a.png>
 Package pdftex.def Info: fig/Tutorial5a.png used on input line 488.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 
-<fig/Tutorial5b.png, id=612, 1099.10625pt x 856.19875pt>
+<fig/Tutorial5b.png, id=614, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial5b.png Graphic file (type png)
 
 <use fig/Tutorial5b.png>
@@ -768,28 +768,28 @@ Package pdftex.def Info: fig/Tutorial5b.png used on input line 492.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
  [20 <./fig/Tutorial5a.png (PNG copy)> <./fig/Tutorial5b.png (PNG copy)>] [21] 
 [22]
-<fig/Tutorial6a.png, id=717, 1099.10625pt x 856.19875pt>
+<fig/Tutorial6a.png, id=719, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial6a.png Graphic file (type png)
 
 <use fig/Tutorial6a.png>
 Package pdftex.def Info: fig/Tutorial6a.png used on input line 591.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 
-<fig/Tutorial6b.png, id=718, 1099.10625pt x 856.19875pt>
+<fig/Tutorial6b.png, id=720, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial6b.png Graphic file (type png)
 
 <use fig/Tutorial6b.png>
 Package pdftex.def Info: fig/Tutorial6b.png used on input line 595.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
  [23 <./fig/Tutorial6a.png (PNG copy)> <./fig/Tutorial6b.png (PNG copy)>] <fig/
-Tutorial7.png, id=744, 1099.10625pt x 856.19875pt>
+Tutorial7.png, id=746, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial7.png Graphic file (type png)
 
 <use fig/Tutorial7.png>
 Package pdftex.def Info: fig/Tutorial7.png used on input line 661.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 
-<fig/Tutorial7b.png, id=745, 1099.10625pt x 856.19875pt>
+<fig/Tutorial7b.png, id=747, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial7b.png Graphic file (type png)
 
 <use fig/Tutorial7b.png>
@@ -800,14 +800,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [24]
 [25 <./fig/Tutorial7.png (PNG copy)> <./fig/Tutorial7b.png (PNG copy)>]
-[26] <fig/Tutorial8.png, id=864, 1099.10625pt x 856.19875pt>
+[26] <fig/Tutorial8.png, id=866, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial8.png Graphic file (type png)
 
 <use fig/Tutorial8.png>
 Package pdftex.def Info: fig/Tutorial8.png used on input line 755.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 
-<fig/Tutorial8b.png, id=865, 1099.10625pt x 856.19875pt>
+<fig/Tutorial8b.png, id=867, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial8b.png Graphic file (type png)
 
 <use fig/Tutorial8b.png>
@@ -828,14 +828,14 @@ File: fig/Tutorial3a.png Graphic file (type png)
 Package pdftex.def Info: fig/Tutorial3a.png used on input line 823.
 (pdftex.def)             Requested size: 155.24895pt x 122.27608pt.
 
-<fig/Tutorial9b.png, id=911, 1099.10625pt x 856.19875pt>
+<fig/Tutorial9b.png, id=913, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial9b.png Graphic file (type png)
 
 <use fig/Tutorial9b.png>
 Package pdftex.def Info: fig/Tutorial9b.png used on input line 827.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 
-<fig/Tutorial9c.png, id=912, 1099.10625pt x 856.19875pt>
+<fig/Tutorial9c.png, id=914, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial9c.png Graphic file (type png)
 
 <use fig/Tutorial9c.png>
@@ -850,7 +850,7 @@ Overfull \hbox (47.08401pt too wide) in paragraph at lines 859--860
 untimeEnvironment.
  []
 
-[30] [31] <fig/Tutorial10.png, id=984, 1099.10625pt x 856.19875pt>
+[30] [31] <fig/Tutorial10.png, id=986, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial10.png Graphic file (type png)
 
 <use fig/Tutorial10.png>
@@ -868,7 +868,7 @@ st::shared[]ptr$\OML/cmm/m/it/10 <$\OT1/cmr/m/n/10 VirtualRobot::Robot$\OML/cmm
 /m/it/10 >$\OT1/cmr/m/n/10 ).
  []
 
-[33] [34] [35] <fig/Tutorial9.png, id=1071, 1099.10625pt x 856.19875pt>
+[33] [34] [35] <fig/Tutorial9.png, id=1073, 1099.10625pt x 856.19875pt>
 File: fig/Tutorial9.png Graphic file (type png)
 
 <use fig/Tutorial9.png>
@@ -879,14 +879,14 @@ File: fig/Tutorial9c.png Graphic file (type png)
 Package pdftex.def Info: fig/Tutorial9c.png used on input line 1060.
 (pdftex.def)             Requested size: 155.24895pt x 120.9383pt.
 
-<fig/ContactPointsBox.png, id=1072, 977.6525pt x 855.195pt>
+<fig/ContactPointsBox.png, id=1074, 977.6525pt x 855.195pt>
 File: fig/ContactPointsBox.png Graphic file (type png)
 
 <use fig/ContactPointsBox.png>
 Package pdftex.def Info: fig/ContactPointsBox.png used on input line 1066.
 (pdftex.def)             Requested size: 155.24895pt x 135.8031pt.
  [36 <./fig/Tutorial9.png (PNG copy)>] [37 <./fig/ContactPointsBox.png>]
-<fig/Wok_grasps_EEF.png, id=1112, 1092.08pt x 814.04124pt>
+<fig/Wok_grasps_EEF.png, id=1114, 1092.08pt x 814.04124pt>
 File: fig/Wok_grasps_EEF.png Graphic file (type png)
 
 <use fig/Wok_grasps_EEF.png>
@@ -908,7 +908,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1218--1219
  []
 
 [41] [42] [43] [44] [45]
-<fig/Reachability_HipRightArm_ArmarIII.png, id=1290, 1193.45876pt x 895.345pt>
+<fig/Reachability_HipRightArm_ArmarIII.png, id=1292, 1193.45876pt x 895.345pt>
 File: fig/Reachability_HipRightArm_ArmarIII.png Graphic file (type png)
 
 <use fig/Reachability_HipRightArm_ArmarIII.png>
@@ -916,13 +916,13 @@ Package pdftex.def Info: fig/Reachability_HipRightArm_ArmarIII.png used on inpu
 t line 1364.
 (pdftex.def)             Requested size: 155.24895pt x 116.46724pt.
 
-<fig/Reachmap.png, id=1291, 1126.2075pt x 952.55875pt>
+<fig/Reachmap.png, id=1293, 1126.2075pt x 952.55875pt>
 File: fig/Reachmap.png Graphic file (type png)
  <use fig/Reachmap.png>
 Package pdftex.def Info: fig/Reachmap.png used on input line 1368.
 (pdftex.def)             Requested size: 155.24895pt x 131.30789pt.
 
-<fig/ReachMapAll.png, id=1292, 1162.3425pt x 776.9025pt>
+<fig/ReachMapAll.png, id=1294, 1162.3425pt x 776.9025pt>
 File: fig/ReachMapAll.png Graphic file (type png)
 
 <use fig/ReachMapAll.png>
@@ -933,7 +933,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [46]
 [47 <./fig/Reachability_HipRightArm_ArmarIII.png> <./fig/Reachmap.png> <./fig/R
-eachMapAll.png (PNG copy)>] <fig/IKDemo.png, id=1345, 782.925pt x 766.865pt>
+eachMapAll.png (PNG copy)>] <fig/IKDemo.png, id=1347, 782.925pt x 766.865pt>
 File: fig/IKDemo.png Graphic file (type png)
 
 <use fig/IKDemo.png>
@@ -944,7 +944,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [48]
 [49 <./fig/IKDemo.png>]
-<fig/HierarchicalIK.png, id=1391, 504.88625pt x 574.145pt>
+<fig/HierarchicalIK.png, id=1393, 504.88625pt x 574.145pt>
 File: fig/HierarchicalIK.png Graphic file (type png)
 
 <use fig/HierarchicalIK.png>
@@ -955,7 +955,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [50]
 [51 <./fig/HierarchicalIK.png>]
-<fig/StabilityDemo.png, id=1435, 677.53125pt x 527.9725pt>
+<fig/StabilityDemo.png, id=1437, 677.53125pt x 527.9725pt>
 File: fig/StabilityDemo.png Graphic file (type png)
 
 <use fig/StabilityDemo.png>
@@ -971,7 +971,7 @@ Overfull \hbox (1.13843pt too wide) in paragraph at lines 1519--1520
 ", "minute",
  []
 
-[54] <fig/Xsd_Robot.png, id=1493, 600.2425pt x 265.99374pt>
+[54] <fig/Xsd_Robot.png, id=1495, 600.2425pt x 265.99374pt>
 File: fig/Xsd_Robot.png Graphic file (type png)
 
 <use fig/Xsd_Robot.png>
@@ -990,7 +990,7 @@ Overfull \hbox (29.7496pt too wide) in paragraph at lines 1568--1569
  >$
  []
 
-<fig/Xsd_RobotNode2.png, id=1494, 745.78625pt x 1689.31125pt>
+<fig/Xsd_RobotNode2.png, id=1496, 745.78625pt x 1689.31125pt>
 File: fig/Xsd_RobotNode2.png Graphic file (type png)
 
 <use fig/Xsd_RobotNode2.png>
@@ -1010,7 +1010,7 @@ T1/cmr/m/n/10 Axis$\OML/cmm/m/it/10 >$ \OT1/cmr/m/n/10 or $\OML/cmm/m/it/10 <$\
 OT1/cmr/m/n/10 TranslationDirection$\OML/cmm/m/it/10 >$\OT1/cmr/m/n/10 ).
  []
 
-<fig/Xsd_Joint2.png, id=1508, 745.78625pt x 1393.205pt>
+<fig/Xsd_Joint2.png, id=1510, 745.78625pt x 1393.205pt>
 File: fig/Xsd_Joint2.png Graphic file (type png)
 
 <use fig/Xsd_Joint2.png>
@@ -1020,7 +1020,7 @@ Package pdftex.def Info: fig/Xsd_Joint2.png used on input line 1586.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [57]
-<fig/Xsd_Physics.png, id=1514, 581.17125pt x 615.29875pt>
+<fig/Xsd_Physics.png, id=1516, 581.17125pt x 615.29875pt>
 File: fig/Xsd_Physics.png Graphic file (type png)
 
 <use fig/Xsd_Physics.png>
@@ -1029,7 +1029,7 @@ Package pdftex.def Info: fig/Xsd_Physics.png used on input line 1593.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [58 <./fig/Xsd_Joint2.png>] <fig/Visualization.png, id=1522, 729.72626pt x 929
+ [58 <./fig/Xsd_Joint2.png>] <fig/Visualization.png, id=1525, 729.72626pt x 929
 .4725pt>
 File: fig/Visualization.png Graphic file (type png)
 
@@ -1037,28 +1037,28 @@ File: fig/Visualization.png Graphic file (type png)
 Package pdftex.def Info: fig/Visualization.png used on input line 1598.
 (pdftex.def)             Requested size: 218.91957pt x 278.8439pt.
  [59 <./fig/Xsd_Physics.png> <./fig/Visualization.png>] <fig/Xsd_CollisionModel
-.png, id=1533, 638.385pt x 481.8pt>
+.png, id=1535, 638.385pt x 481.8pt>
 File: fig/Xsd_CollisionModel.png Graphic file (type png)
 
 <use fig/Xsd_CollisionModel.png>
 Package pdftex.def Info: fig/Xsd_CollisionModel.png used on input line 1627.
 (pdftex.def)             Requested size: 191.51697pt x 144.5411pt.
 
-<fig/Xsd_Sensor.png, id=1534, 856.19875pt x 582.175pt>
+<fig/Xsd_Sensor.png, id=1536, 856.19875pt x 582.175pt>
 File: fig/Xsd_Sensor.png Graphic file (type png)
 
 <use fig/Xsd_Sensor.png>
 Package pdftex.def Info: fig/Xsd_Sensor.png used on input line 1634.
 (pdftex.def)             Requested size: 256.8616pt x 174.65384pt.
  [60 <./fig/Xsd_CollisionModel.png>]
-<fig/Xsd_RobotNodeSet.png, id=1560, 529.98pt x 280.04625pt>
+<fig/Xsd_RobotNodeSet.png, id=1562, 529.98pt x 280.04625pt>
 File: fig/Xsd_RobotNodeSet.png Graphic file (type png)
 
 <use fig/Xsd_RobotNodeSet.png>
 Package pdftex.def Info: fig/Xsd_RobotNodeSet.png used on input line 1640.
 (pdftex.def)             Requested size: 158.99521pt x 84.01451pt.
 
-<fig/Xsd_EEF_open.png, id=1561, 723.70375pt x 911.405pt>
+<fig/Xsd_EEF_open.png, id=1563, 723.70375pt x 911.405pt>
 File: fig/Xsd_EEF_open.png Graphic file (type png)
 
 <use fig/Xsd_EEF_open.png>
@@ -1073,7 +1073,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 ]
 Chapter 4.
-[67] <fig/PlanningBiRrt_ext_ext.png, id=1680, 623.32875pt x 797.98125pt>
+[67] <fig/PlanningBiRrt_ext_ext.png, id=1682, 623.32875pt x 797.98125pt>
 File: fig/PlanningBiRrt_ext_ext.png Graphic file (type png)
 
 <use fig/PlanningBiRrt_ext_ext.png>
@@ -1084,27 +1084,27 @@ Package pdftex.def Info: fig/PlanningBiRrt_ext_ext.png used on input line 1792.
 Underfull \vbox (badness 1924) has occurred while \output is active []
 
  [68]
-<fig/PlanningBiRrt1.png, id=1703, 801.99625pt x 766.865pt>
+<fig/PlanningBiRrt1.png, id=1705, 801.99625pt x 766.865pt>
 File: fig/PlanningBiRrt1.png Graphic file (type png)
 
 <use fig/PlanningBiRrt1.png>
 Package pdftex.def Info: fig/PlanningBiRrt1.png used on input line 1816.
 (pdftex.def)             Requested size: 240.60072pt x 230.06128pt.
  [69 <./fig/PlanningBiRrt_ext_ext.png>] [70 <./fig/PlanningBiRrt1.png>]
-<fig/PlanningBiRrt2.png, id=1748, 700.6175pt x 716.6775pt>
+<fig/PlanningBiRrt2.png, id=1750, 700.6175pt x 716.6775pt>
 File: fig/PlanningBiRrt2.png Graphic file (type png)
 
 <use fig/PlanningBiRrt2.png>
 Package pdftex.def Info: fig/PlanningBiRrt2.png used on input line 1848.
 (pdftex.def)             Requested size: 210.18686pt x 215.00491pt.
  [71 <./fig/PlanningBiRrt2.png>] [72] [73] [74]
-[75] [76] <fig/GraspRRT1.png, id=1946, 490.83376pt x 380.42125pt>
+[75] [76] <fig/GraspRRT1.png, id=1948, 490.83376pt x 380.42125pt>
 File: fig/GraspRRT1.png Graphic file (type png)
 
 <use fig/GraspRRT1.png>
 Package pdftex.def Info: fig/GraspRRT1.png used on input line 2051.
 (pdftex.def)             Requested size: 155.24895pt x 120.32672pt.
- <fig/GraspRRT2.png, id=1947, 490.83376pt x 369.38pt>
+ <fig/GraspRRT2.png, id=1949, 490.83376pt x 369.38pt>
 File: fig/GraspRRT2.png Graphic file (type png)
 
 <use fig/GraspRRT2.png>
@@ -1115,7 +1115,7 @@ Package pdftex.def Info: fig/GraspRRT2.png used on input line 2055.
 
 ]
 Chapter 5.
-[79] <fig/GraspPlanner.png, id=1986, 991.705pt x 830.10126pt>
+[79] <fig/GraspPlanner.png, id=1988, 991.705pt x 830.10126pt>
 File: fig/GraspPlanner.png Graphic file (type png)
 
 <use fig/GraspPlanner.png>
@@ -1126,14 +1126,14 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [80]
 [81 <./fig/GraspPlanner.png>]
-<fig/GraspPlanner1.png, id=2021, 633.36626pt x 428.60126pt>
+<fig/GraspPlanner1.png, id=2023, 633.36626pt x 428.60126pt>
 File: fig/GraspPlanner1.png Graphic file (type png)
 
 <use fig/GraspPlanner1.png>
 Package pdftex.def Info: fig/GraspPlanner1.png used on input line 2118.
 (pdftex.def)             Requested size: 345.0pt x 233.4686pt.
  [82 <./fig/GraspPlanner1.png>]
-<fig/Grasp1.png, id=2039, 514.92375pt x 760.8425pt>
+<fig/Grasp1.png, id=2041, 514.92375pt x 760.8425pt>
 File: fig/Grasp1.png Graphic file (type png)
  <use fig/Grasp1.png>
 Package pdftex.def Info: fig/Grasp1.png used on input line 2141.
@@ -1151,50 +1151,38 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 2179.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 2179.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 2179.
 
+Package rerunfilecheck Info: File `simox-manual-for-pandora.out' has not change
+d.
+(rerunfilecheck)             Checksum: F50F4017163C6530B7AD20EDF779860A;4603.
 
-
-Package rerunfilecheck Warning: File `simox-manual-for-pandora.out' has changed
-.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `simox-manual-for-pandora.out':
-(rerunfilecheck)             Before: 89E42DA06F7BDEDF6B15340E1853EBDA;4540
-(rerunfilecheck)             After:  F50F4017163C6530B7AD20EDF779860A;4603.
 
 LaTeX Warning: There were undefined references.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 2179.
  ) 
 Here is how much of TeX's memory you used:
- 13103 strings out of 493304
- 196277 string characters out of 6139871
+ 13102 strings out of 493304
+ 196258 string characters out of 6139871
  458404 words of memory out of 5000000
- 14887 multiletter control sequences out of 15000+600000
+ 14888 multiletter control sequences out of 15000+600000
  13622 words of font info for 49 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
  42i,8n,58p,1217b,1869s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{subsection.1.3.2} has been referenced but does no
-t exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{subsection.1.3.1} has been referenced but does not 
-exist, replaced by a fixed one
-
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></usr
-/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmtt10.pfb>
-Output written on simox-manual-for-pandora.pdf (89 pages, 6692761 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbsy10.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsl10.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmtt10.pfb>
+Output written on simox-manual-for-pandora.pdf (89 pages, 6693106 bytes).
 PDF statistics:
- 2425 PDF objects out of 2487 (max. 8388607)
- 2247 compressed objects within 23 object streams
- 1454 named destinations out of 1728 (max. 500000)
- 749 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2426 PDF objects out of 2487 (max. 8388607)
+ 2248 compressed objects within 23 object streams
+ 1452 named destinations out of 1728 (max. 500000)
+ 757 words of extra memory for PDF output out of 10000 (max. 10000000)
 
